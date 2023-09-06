@@ -7,8 +7,7 @@ class CellTemplate extends StatelessWidget {
   final MaterialColor color;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: Container(
+    return Container(
       width: 300,
       height: 300,
       decoration: BoxDecoration(
@@ -44,6 +43,6 @@ class CellTemplate extends StatelessWidget {
           ),
         ),
       ),
-    ));
+    );
   }
 }

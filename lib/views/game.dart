@@ -10,17 +10,18 @@ class Game extends StatelessWidget {
   Widget build(BuildContext context) {
     Controller controller = Get.find<Controller>();
 
-    return Scaffold(
-        body: GridView.builder(
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 10),
-            itemCount: controller.gridModel.value.columnsLength *
-                controller.gridModel.value.rowsLength,
-            itemBuilder: (BuildContext context, int index) {
-              return CellTemplate(
-                index,
-                color: controller.gridModel.value.cells[index].color!,
-              );
-            }));
+    return Scaffold(body: Obx(() {
+      return GridView.builder(
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 10),
+          itemCount: controller.gridModel.value.columnsLength *
+              controller.gridModel.value.rowsLength,
+          itemBuilder: (BuildContext context, int index) {
+            return CellTemplate(
+              index,
+              color: controller.gridModel.value.cells[index].color!,
+            );
+          });
+    }));
   }
 }
