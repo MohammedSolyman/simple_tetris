@@ -1,6 +1,15 @@
 import 'dart:async';
 import 'package:simple_tetris/controllers/initial_controller.dart';
 
+/*
+Controller
+InitialController
+MovingController
+ScoreController
+CheckMovingController
+ColorController
+GetxController
+*/
 class Controller extends InitialController {
   start() {
     initializeCurrentTetrino();
@@ -22,7 +31,7 @@ class Controller extends InitialController {
   @override
   void onInit() {
     super.onInit();
-    gridModel.value.initializeGrid();
+    initializeGrid();
     start();
   }
 
