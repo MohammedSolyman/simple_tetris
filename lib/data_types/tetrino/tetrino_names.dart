@@ -1,1 +1,1 @@
-enum TetrinosNames { l, stick, t, o, s, z, dash }
+enum TetrinosNames { l, t, o, s, z, stick, dash }

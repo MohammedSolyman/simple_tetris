@@ -12,31 +12,31 @@ class CellTemplate extends StatelessWidget {
       height: 300,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(7),
-        color: color[200],
+        color: color.shade200,
       ),
       child: Container(
-        margin: const EdgeInsets.all(3),
+        margin: const EdgeInsets.all(2),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(7),
-          color: color[300],
+          color: color.shade300,
         ),
         child: Container(
-          margin: const EdgeInsets.all(3),
+          margin: const EdgeInsets.all(2),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(7),
-            color: color[400],
+            color: color.shade400,
           ),
           child: Container(
-            margin: const EdgeInsets.all(3),
+            margin: const EdgeInsets.all(2),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(7),
-              color: color[500],
+              color: color.shade500,
             ),
             child: Container(
-              margin: const EdgeInsets.all(3),
+              margin: const EdgeInsets.all(2),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(7),
-                color: color[600],
+                color: color.shade600,
               ),
               child: Text(no.toString()),
             ),

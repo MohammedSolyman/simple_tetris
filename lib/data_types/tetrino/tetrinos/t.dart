@@ -3,13 +3,13 @@ import 'package:simple_tetris/constants/tetrinos_colors.dart';
 import 'package:simple_tetris/data_types/tetrino/tetrino_base.dart';
 import 'package:simple_tetris/data_types/tetrino/tetrino_names.dart';
 
-class Stick implements TetrinoBase {
+class T implements TetrinoBase {
   @override
-  MaterialColor color = TetrinosColors.tetrinosColors[TetrinosNames.stick];
+  MaterialColor color = TetrinosColors.tetrinosColors[TetrinosNames.t];
 
   @override
-  List<int> currentPosition = [-26, -16, -6];
+  List<int> currentPosition = [-27, -26, -25, -16, -6];
 
   @override
-  List<int> initialPosition = [-26, -16, -6];
+  List<int> initialPosition = [-27, -26, -25, -16, -6];
 }

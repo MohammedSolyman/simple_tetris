@@ -9,9 +9,7 @@ class L implements TetrinoBase {
 
   @override
   List<int> currentPosition = [-26, -16, -6, -5];
-  //List<int> currentPosition = [4, 14, 24, 25];
 
   @override
   List<int> initialPosition = [-26, -16, -6, -5];
-  //List<int> initialPosition = [4, 14, 24, 25];
 }
