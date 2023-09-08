@@ -6,6 +6,18 @@ import 'package:simple_tetris/views/game.dart';
 /*
 git push https://github.com/MohammedSolyman/simple_tetris.git master
 
+
+landing, left and right chescks were modified
+destroying line and shifting down were added
+
+
+
+
+bug: if two line are complteted
+winngig
+game over
+rotation
+
 */
 void main() {
   Get.put(Controller());

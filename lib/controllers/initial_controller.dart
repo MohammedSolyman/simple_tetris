@@ -12,6 +12,38 @@ import 'package:simple_tetris/data_types/tetrino/tetrinos/z.dart';
 
 class InitialController extends MovingController {
   void initializeGrid() {
+    int leftStart =
+        gridModel.value.columnsLength - (gridModel.value.columnsLength * 9);
+
+    gridModel.value.mostLeft =
+        List.generate(gridModel.value.rowsLength * 2, (index) {
+      return leftStart + index * gridModel.value.columnsLength;
+    });
+    print('most left ----------------');
+    print(gridModel.value.mostLeft);
+
+    // gridModel.value.mostRight =
+    //     List.generate(gridModel.value.rowsLength, (index) {
+    //   return (index * gridModel.value.columnsLength);
+    // });
+
+    // gridModel.value.mostRight =
+    //     List.generate(gridModel.value.rowsLength, (index) {
+    //   return ((index + 1) * gridModel.value.columnsLength) - 1;
+    // });
+
+    int rightStart =
+        gridModel.value.columnsLength - (gridModel.value.columnsLength * 9) - 1;
+    print('rightStart: $rightStart');
+
+    gridModel.value.mostRight =
+        List.generate(gridModel.value.rowsLength * 2, (index) {
+      return rightStart + index * gridModel.value.columnsLength;
+    });
+
+    print('most right ----------------');
+    print(gridModel.value.mostRight);
+
     for (int rowIndex = 0; rowIndex < gridModel.value.rowsLength; rowIndex++) {
       for (int columnIndex = 0;
           columnIndex < gridModel.value.columnsLength;
@@ -24,9 +56,7 @@ class InitialController extends MovingController {
         if (columnIndex == (gridModel.value.columnsLength - 1)) {
           cell.isNextRightBorder = true;
         }
-        if (rowIndex == (gridModel.value.rowsLength - 1)) {
-          cell.isNextDownBorder = true;
-        }
+
         gridModel.value.cells.add(cell);
       }
     }
@@ -67,5 +97,17 @@ class InitialController extends MovingController {
 
       default:
     }
+
+    // int random = Random().nextInt(2);
+
+    // switch (random) {
+    //   case 0:
+    //     gridModel.value.currentTetrino = Dash();
+    //     break;
+    //   case 1:
+    //     gridModel.value.currentTetrino = O();
+    //     break;
+    //   default:
+    // }
   }
 }

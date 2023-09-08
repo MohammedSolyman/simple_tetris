@@ -42,7 +42,6 @@ class MovingController extends ScoreController {
   void rotate() {}
 
   void land() {
-    print('landing...');
     gridModel.update((val) {
       for (int index in val!.currentTetrino!.currentPosition) {
         if (index >= 0 && index < gridModel.value.cells.length) {
@@ -50,7 +49,5 @@ class MovingController extends ScoreController {
         }
       }
     });
-
-    isRowComplete();
   }
 }

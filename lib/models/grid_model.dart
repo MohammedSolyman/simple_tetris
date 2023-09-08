@@ -8,4 +8,6 @@ class GridModel {
   List<Cell> cells = [];
   TetrinoBase? currentTetrino;
   Timer? timer;
+  List<int> mostRight = [];
+  List<int> mostLeft = [];
 }
