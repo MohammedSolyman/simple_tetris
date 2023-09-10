@@ -41,7 +41,11 @@ class Botton extends StatelessWidget {
                 controller.moveLeft();
               },
               icon: const Icon(Icons.arrow_back)),
-          IconButton(onPressed: () {}, icon: const Icon(Icons.rotate_right)),
+          IconButton(
+              onPressed: () {
+                controller.rotate();
+              },
+              icon: const Icon(Icons.rotate_right)),
           IconButton(
               onPressed: () {
                 controller.moveRight();

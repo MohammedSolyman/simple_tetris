@@ -23,6 +23,7 @@ class ScoreController extends CheckMovingController {
       }
 
       await destroyAndShift(isCompelete, i);
+      // i = i + gridModel.value.columnsLength;
       // print('row starting with $i is complete? $isCompelete');
     }
   }
@@ -45,12 +46,10 @@ class ScoreController extends CheckMovingController {
   }
 
   void _shiftDown(int startIndex) {
-    print('shifting ... ');
     int newStart = startIndex - gridModel.value.columnsLength;
-    print('new start is $newStart ... ');
 
     for (var i = newStart; i >= 0; i = i - gridModel.value.columnsLength) {
-      //this ouer loop will loop the start of each lines
+      //this outer loop will loop the start of each lines
 
       int max = i + gridModel.value.columnsLength;
 

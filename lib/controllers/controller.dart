@@ -4,6 +4,8 @@ import 'package:simple_tetris/controllers/initial_controller.dart';
 /*
 Controller
 InitialController
+
+rotationController
 MovingController
 ScoreController
 CheckMovingController
@@ -19,12 +21,15 @@ class Controller extends InitialController {
           Timer.periodic(const Duration(seconds: 1), (Timer timer) async {
         print(timer.tick);
 
-        if (isLandDown() || isOccupiedDown()) {
+        if (isInNotOccupiedDown()) {
+          print('down ...................');
+
+          moveDown();
+        } else {
+          print('landing ...................');
           land();
           await lineComplete();
           initializeCurrentTetrino();
-        } else {
-          moveDown();
         }
       });
     });
