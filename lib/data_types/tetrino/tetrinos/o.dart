@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:simple_tetris/constants/tetrinos_colors.dart';
-import 'package:simple_tetris/data_types/cell/cell.dart';
 import 'package:simple_tetris/data_types/tetrino/tetrino_base.dart';
 import 'package:simple_tetris/data_types/tetrino/tetrino_names.dart';
 
@@ -24,15 +23,25 @@ class O implements TetrinoBase {
   ];
 
   @override
-  List<int> toPositionOne(int columnsLength) {
+  List<int> fourToOne(int columnsLength) {
     return currentPosition;
   }
 
   @override
-  List<int> toPositionTwo(int columnsLength) {
+  List<int> oneToTwo(int columnsLength) {
     return currentPosition;
   }
 
   @override
   String positionSymbol = 'one';
+
+  @override
+  List<int> twoToThree(int columnsLength) {
+    return currentPosition;
+  }
+
+  @override
+  List<int> threeToFour(int columnsLength) {
+    return currentPosition;
+  }
 }

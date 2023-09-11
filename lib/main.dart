@@ -7,9 +7,7 @@ import 'package:simple_tetris/views/game.dart';
 git push https://github.com/MohammedSolyman/simple_tetris.git master
 
 
-two successive completed lines bug was resolved,
 
-rotation of stick,o,dash,l,s,t
 
 
 

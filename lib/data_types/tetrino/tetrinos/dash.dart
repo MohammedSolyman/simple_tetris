@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:simple_tetris/constants/tetrinos_colors.dart';
-import 'package:simple_tetris/data_types/cell/cell.dart';
 import 'package:simple_tetris/data_types/tetrino/tetrino_base.dart';
 import 'package:simple_tetris/data_types/tetrino/tetrino_names.dart';
 
 class Dash implements TetrinoBase {
   @override
   String positionSymbol = 'one';
+
   @override
   MaterialColor color = TetrinosColors.tetrinosColors[TetrinosNames.dash];
 
@@ -17,7 +17,7 @@ class Dash implements TetrinoBase {
   List<int> initialPosition = [-9, -8, -7];
 
   @override
-  List<int> toPositionOne(int columnsLength) {
+  List<int> fourToOne(int columnsLength) {
     int new0 = (currentPosition[0] + columnsLength) - 1;
     int new1 = currentPosition[1];
     int new2 = (currentPosition[2] - columnsLength) + 1;
@@ -25,7 +25,23 @@ class Dash implements TetrinoBase {
   }
 
   @override
-  List<int> toPositionTwo(int columnsLength) {
+  List<int> oneToTwo(int columnsLength) {
+    int new0 = (currentPosition[0] - columnsLength) + 1;
+    int new1 = currentPosition[1];
+    int new2 = (currentPosition[2] + columnsLength - 1);
+    return [new0, new1, new2];
+  }
+
+  @override
+  List<int> twoToThree(int columnsLength) {
+    int new0 = (currentPosition[0] + columnsLength) - 1;
+    int new1 = currentPosition[1];
+    int new2 = (currentPosition[2] - columnsLength) + 1;
+    return [new0, new1, new2];
+  }
+
+  @override
+  List<int> threeToFour(int columnsLength) {
     int new0 = (currentPosition[0] - columnsLength) + 1;
     int new1 = currentPosition[1];
     int new2 = (currentPosition[2] + columnsLength - 1);

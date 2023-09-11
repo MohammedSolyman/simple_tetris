@@ -17,7 +17,7 @@ class Stick implements TetrinoBase {
   String positionSymbol = 'one';
 
   @override
-  List<int> toPositionOne(int columnsLength) {
+  List<int> fourToOne(int columnsLength) {
     int new0 = (currentPosition[0] - columnsLength) + 1;
     int new1 = currentPosition[1];
     int new2 = (currentPosition[2] + columnsLength - 1);
@@ -25,10 +25,27 @@ class Stick implements TetrinoBase {
   }
 
   @override
-  List<int> toPositionTwo(int columnsLength) {
+  List<int> oneToTwo(int columnsLength) {
     int new0 = (currentPosition[0] + columnsLength) - 1;
     int new1 = currentPosition[1];
     int new2 = (currentPosition[2] - columnsLength) + 1;
     return [new0, new1, new2];
+  }
+
+  @override
+  List<int> twoToThree(int columnsLength) {
+    int new0 = (currentPosition[0] - columnsLength) + 1;
+    int new1 = currentPosition[1];
+    int new2 = (currentPosition[2] + columnsLength - 1);
+    return [new0, new1, new2];
+  }
+
+  @override
+  List<int> threeToFour(int columnsLength) {
+    int new0 = (currentPosition[0] + columnsLength) - 1;
+    int new1 = currentPosition[1];
+    int new2 = (currentPosition[2] - columnsLength) + 1;
+    return [new0, new1, new2];
+    ;
   }
 }
