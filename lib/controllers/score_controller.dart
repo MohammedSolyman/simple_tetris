@@ -22,15 +22,24 @@ class ScoreController extends CheckMovingController {
         }
       }
 
-      await destroyAndShift(isCompelete, i);
-      // i = i + gridModel.value.columnsLength;
+      //  await destroyAndShift(isCompelete, i);
+
+      if (isCompelete) {
+        await _destroyLine(i);
+        _shiftDown(i);
+        i = i + gridModel.value.columnsLength;
+      }
+
+      // print('i: $i -----------------------------------------------');
+
+      // print('i: $i-----------------------------------------------');
       // print('row starting with $i is complete? $isCompelete');
     }
   }
 
   Future<void> _destroyLine(int startIndex) async {
-    print(
-        'destroying line starting with $startIndex...................................');
+    // print(
+    //     'destroying line starting with $startIndex...................................');
 
     int max = startIndex + gridModel.value.columnsLength;
 

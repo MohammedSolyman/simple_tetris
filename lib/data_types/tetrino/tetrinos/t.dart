@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:simple_tetris/constants/tetrinos_colors.dart';
-import 'package:simple_tetris/data_types/cell/cell.dart';
 import 'package:simple_tetris/data_types/tetrino/tetrino_base.dart';
 import 'package:simple_tetris/data_types/tetrino/tetrino_names.dart';
 
@@ -16,12 +15,22 @@ class T implements TetrinoBase {
 
   @override
   List<int> toPositionOne(int columnsLength) {
-    return [];
+    int new0 = currentPosition[0] - 2;
+    int new1 = (currentPosition[1] - columnsLength) + 1;
+    int new2 = (currentPosition[2] - columnsLength) + 1;
+    int new3 = currentPosition[3] - 1;
+    int new4 = currentPosition[4] - 1;
+    return [new0, new1, new2, new3, new4];
   }
 
   @override
   List<int> toPositionTwo(int columnsLength) {
-    return [];
+    int new0 = currentPosition[0] + 2;
+    int new1 = (currentPosition[1] + columnsLength) - 1;
+    int new2 = (currentPosition[2] + columnsLength) - 1;
+    int new3 = currentPosition[3] + 1;
+    int new4 = currentPosition[4] + 1;
+    return [new0, new1, new2, new3, new4];
   }
 
   @override

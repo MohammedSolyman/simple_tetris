@@ -11,18 +11,24 @@ class Dash implements TetrinoBase {
   MaterialColor color = TetrinosColors.tetrinosColors[TetrinosNames.dash];
 
   @override
-  List<int> currentPosition = [-7, -8, -9, -10];
+  List<int> currentPosition = [-9, -8, -7];
 
   @override
-  List<int> initialPosition = [-7, -8, -9, -10];
+  List<int> initialPosition = [-9, -8, -7];
 
   @override
   List<int> toPositionOne(int columnsLength) {
-    return [];
+    int new0 = (currentPosition[0] + columnsLength) - 1;
+    int new1 = currentPosition[1];
+    int new2 = (currentPosition[2] - columnsLength) + 1;
+    return [new0, new1, new2];
   }
 
   @override
   List<int> toPositionTwo(int columnsLength) {
-    return [];
+    int new0 = (currentPosition[0] - columnsLength) + 1;
+    int new1 = currentPosition[1];
+    int new2 = (currentPosition[2] + columnsLength - 1);
+    return [new0, new1, new2];
   }
 }

@@ -25,12 +25,12 @@ class O implements TetrinoBase {
 
   @override
   List<int> toPositionOne(int columnsLength) {
-    return [];
+    return currentPosition;
   }
 
   @override
   List<int> toPositionTwo(int columnsLength) {
-    return [];
+    return currentPosition;
   }
 
   @override

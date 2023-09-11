@@ -17,16 +17,13 @@ class Controller extends InitialController {
     initializeCurrentTetrino();
 
     gridModel.update((val) {
-      val!.timer =
-          Timer.periodic(const Duration(seconds: 1), (Timer timer) async {
+      val!.timer = Timer.periodic(const Duration(milliseconds: 500),
+          (Timer timer) async {
         print(timer.tick);
 
         if (isInNotOccupiedDown()) {
-          print('down ...................');
-
           moveDown();
         } else {
-          print('landing ...................');
           land();
           await lineComplete();
           initializeCurrentTetrino();

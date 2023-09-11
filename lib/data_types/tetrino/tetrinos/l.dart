@@ -16,12 +16,20 @@ class L implements TetrinoBase {
 
   @override
   List<int> toPositionOne(int columnsLength) {
-    return [];
+    int new0 = (currentPosition[0] - (2 * columnsLength)) + 1;
+    int new1 = currentPosition[1] - columnsLength;
+    int new2 = currentPosition[2] - 1;
+    int new3 = currentPosition[3] + columnsLength;
+    return [new0, new1, new2, new3];
   }
 
   @override
   List<int> toPositionTwo(int columnsLength) {
-    return [];
+    int new0 = (currentPosition[0] + (2 * columnsLength)) - 1;
+    int new1 = currentPosition[1] + columnsLength;
+    int new2 = currentPosition[2] + 1;
+    int new3 = currentPosition[3] - columnsLength;
+    return [new0, new1, new2, new3];
   }
 
   @override
