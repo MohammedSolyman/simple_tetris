@@ -26,20 +26,6 @@ class RotationController extends MovingController {
         }
       }
     }
-
-    // if (isBorderRight() || isOccupiedRight()) {
-    //   //if the tetrino is next to right border or occupied cells, rotate and shift to left
-    // } else if (isBorderLeft() || isOccupiedLeft()) {
-    //   //if the tetrino is next to left border or occupied cells, rotate and shift to right
-    //   for (var i = 0; i < temp.length; i++) {
-    //     temp[i] = temp[i] + 1;
-    //   }
-    //   //test if the new position interfere with occupied cells & if within grid range
-    //   isInNotOccupied(temp, to);
-    // } else {
-    //   //test if the new position interfere with occupied cells & if within grid range
-    //   isInNotOccupied(temp, to);
-    // }
   }
 
   void rotate() {

@@ -58,41 +58,4 @@ class MovingController extends ScoreController {
       }
     });
   }
-
-  // void moveDown() {
-  //   restoreGridColor();
-
-  //   gridModel.update((val) {
-  //     for (var i = 0; i < val!.currentTetrino!.currentPosition.length; i++) {
-  //       val.currentTetrino!.currentPosition[i] += val.columnsLength;
-  //     }
-  //   });
-
-  //   changeGridColor();
-  // }
-
-  // void moveRight() {
-  //   restoreGridColor();
-  //   if (!isBorderRight() && !isOccupiedRight()) {
-  //     gridModel.update((val) {
-  //       for (int i = 0; i < val!.currentTetrino!.currentPosition.length; i++) {
-  //         val.currentTetrino!.currentPosition[i] += 1;
-  //       }
-  //     });
-  //   }
-  //   changeGridColor();
-  // }
-
-  // void moveLeft() {
-  //   restoreGridColor();
-
-  //   if (!isBorderLeft() && !isOccupiedLeft()) {
-  //     gridModel.update((val) {
-  //       for (int i = 0; i < val!.currentTetrino!.currentPosition.length; i++) {
-  //         val.currentTetrino!.currentPosition[i] -= 1;
-  //       }
-  //     });
-  //   }
-  //   changeGridColor();
-  // }
 }

@@ -1,6 +1,6 @@
-import 'package:simple_tetris/controllers/color_controller.dart';
+import 'package:simple_tetris/controllers/audio_controller.dart';
 
-class CheckMovingController extends ColorController {
+class CheckMovingController extends AudioController {
   //before moving right or left, check the next move if it is valid commit it,
   //but if it is not valid, don't commit it.
   //we are looking at new position of the move and check the following:
@@ -44,7 +44,6 @@ class CheckMovingController extends ColorController {
     for (var i = 0; i < temp.length; i++) {
       int tempRow = (temp[i] / gridModel.value.columnsLength).floor();
       int rightRow = (right[i] / gridModel.value.columnsLength).floor();
-      // int leftRow = (left[i] / gridModel.value.columnsLength).floor();
 
       if (tempRow == rightRow) {
       } else {
@@ -133,101 +132,4 @@ class CheckMovingController extends ColorController {
 
     return x;
   }
-
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-//   bool isOccupiedRight() {
-//     bool x = false;
-//     for (int index in gridModel.value.currentTetrino!.currentPosition) {
-//       int nextIndex = index + 1;
-//       if (index >= 0 &&
-//           index < gridModel.value.cells.length &&
-//           gridModel.value.cells[nextIndex].isOcuppied!) {
-//         x = true;
-//       }
-//     }
-//     return x;
-//   }
-
-//   bool isOccupiedLeft() {
-//     //if we shift the current tetrino to the left, it returns true if all cells in
-//     //the new position are NOT in occupied cells.
-//     bool x = false;
-//     for (int index in gridModel.value.currentTetrino!.currentPosition) {
-//       int nextIndex = index - 1;
-//       if (index >= 0 &&
-//           index < gridModel.value.cells.length &&
-//           gridModel.value.cells[nextIndex].isOcuppied!) {
-//         x = true;
-//       }
-//     }
-//     return x;
-//   }
-
-//   bool isBorderLeft() {
-//     return gridModel.value.currentTetrino!.currentPosition
-//         .any((int index) => gridModel.value.mostLeft.contains(index));
-
-//     // bool x = false;
-//     // for (int index in gridModel.value.currentTetrino!.currentPosition) {
-//     //   if (index >= 0 &&
-//     //       index < gridModel.value.cells.length &&
-//     //       gridModel.value.cells[index].isNextLeftBorder!) {
-//     //     x = true;
-//     //   }
-//     // }
-//     // return x;
-//   }
-
-//   bool isLandDown() {
-//     bool x = false;
-//     for (int index in gridModel.value.currentTetrino!.currentPosition) {
-//       int nextIndex = index + gridModel.value.columnsLength;
-
-//       if (nextIndex >= gridModel.value.cells.length) {
-//         x = true;
-//       }
-//     }
-//     return x;
-//   }
-
-//   bool isOccupiedDown() {
-//     bool x = false;
-//     for (int index in gridModel.value.currentTetrino!.currentPosition) {
-//       int nextIndex = index + gridModel.value.columnsLength;
-
-//       if (nextIndex >= 0 &&
-//           nextIndex < gridModel.value.cells.length &&
-//           gridModel.value.cells[nextIndex].isOcuppied!) {
-//         x = true;
-//       }
-//     }
-//     return x;
-//   }
-
-//   bool isBorderRight() {
-//     return gridModel.value.currentTetrino!.currentPosition
-//         .any((int index) => gridModel.value.mostRight.contains(index));
-
-//     // for (int index in gridModel.value.currentTetrino!.currentPosition) {
-//     //   if (gridModel.value.cells[index].isNextRightBorder!) {
-//     //     x = true;
-//     //   }
-//     // }
-
-//     // bool x = false;
-//     // for (int index in gridModel.value.currentTetrino!.currentPosition) {
-//     //   if (index >= 0 &&
-//     //       index < gridModel.value.cells.length &&
-//     //       gridModel.value.cells[index].isNextRightBorder!) {
-//     //     x = true;
-//     //   }
-//     // }
-//     // return x;
-//   }
-// }
 }

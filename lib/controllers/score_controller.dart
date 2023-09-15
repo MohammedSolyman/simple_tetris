@@ -1,3 +1,4 @@
+import 'package:simple_tetris/constants/my_audio.dart';
 import 'package:simple_tetris/constants/my_colors.dart';
 import 'package:simple_tetris/controllers/check_moving_controller.dart';
 
@@ -15,32 +16,24 @@ class ScoreController extends CheckMovingController {
       for (var k = i; k < max; k++) {
         //this inner loop will loop each cell in this line.
 
-        //   print('       inner for i = $k ------');
         if (!gridModel.value.cells[k].isOcuppied!) {
           isCompelete = false;
           break;
         }
       }
 
-      //  await destroyAndShift(isCompelete, i);
-
       if (isCompelete) {
         await _destroyLine(i);
         _shiftDown(i);
         i = i + gridModel.value.columnsLength;
+        print('before line completed -------------------------------');
+        playAudio(MyAudio.lineCompleted);
+        print('after line completed -------------------------------');
       }
-
-      // print('i: $i -----------------------------------------------');
-
-      // print('i: $i-----------------------------------------------');
-      // print('row starting with $i is complete? $isCompelete');
     }
   }
 
   Future<void> _destroyLine(int startIndex) async {
-    // print(
-    //     'destroying line starting with $startIndex...................................');
-
     int max = startIndex + gridModel.value.columnsLength;
 
     for (var i = startIndex; i < max; i++) {
@@ -49,9 +42,6 @@ class ScoreController extends CheckMovingController {
         val.cells[i].isOcuppied = false;
       });
     }
-
-    //wait two second
-    // await Future.delayed(Duration(seconds: 2));
   }
 
   void _shiftDown(int startIndex) {
