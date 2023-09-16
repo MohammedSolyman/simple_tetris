@@ -7,12 +7,6 @@ import 'package:simple_tetris/views/game.dart';
 git push https://github.com/MohammedSolyman/simple_tetris.git master
 
 
-
-
-
-
-
-
 */
 void main() {
   runApp(const MainApp());

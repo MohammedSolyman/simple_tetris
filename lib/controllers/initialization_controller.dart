@@ -26,6 +26,9 @@ class InitializationController extends RotationController {
   }
 
   void initializeCurrentTetrino() {
+    // gridModel.value.currentTetrino =
+    //     Test(columnsLength: gridModel.value.level.columnsLength);
+
     int random = Random().nextInt(TetrinosNames.values.length);
     TetrinosNames tetrinoName = TetrinosNames.values[random];
 

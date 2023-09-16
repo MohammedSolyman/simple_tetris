@@ -1,4 +1,3 @@
-import 'package:simple_tetris/constants/grid_constants.dart';
 import 'package:simple_tetris/constants/my_audio.dart';
 import 'package:simple_tetris/constants/my_colors.dart';
 import 'package:simple_tetris/controllers/check_moving_controller.dart';
@@ -29,7 +28,7 @@ class ScoreController extends CheckMovingController {
         await _destroyLine(i);
         _shiftDown(i);
         _addPoints();
-        _changeLevel();
+
         i = i + gridModel.value.level.columnsLength;
         playAudio(MyAudio.lineCompleted);
       }
@@ -76,32 +75,9 @@ class ScoreController extends CheckMovingController {
     }
   }
 
-  // Future<void> destroyAndShift(bool b, int startIndex) async {
-  //   if (b) {
-  //     await _destroyLine(startIndex);
-  //     _shiftDown(startIndex);
-  //   }
-  // }
-
   void _addPoints() {
     gridModel.update((val) {
       val!.points += 100;
-    });
-  }
-
-  void _changeLevel() {
-    gridModel.update((val) {
-      if (val!.points < 1001) {
-        val.level = GridConstants.one;
-      } else if (val.points > 1000 && val.points < 2001) {
-        val.level = GridConstants.two;
-      } else if (val.points > 2000 && val.points < 3001) {
-        val.level = GridConstants.three;
-      } else if (val.points > 3000 && val.points < 4001) {
-        val.level = GridConstants.four;
-      } else if (val.points > 4000) {
-        val.level = GridConstants.five;
-      }
     });
   }
 }

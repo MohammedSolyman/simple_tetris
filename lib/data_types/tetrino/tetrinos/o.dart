@@ -47,3 +47,44 @@ class O implements TetrinoBase {
     return currentPosition;
   }
 }
+
+class Test implements TetrinoBase {
+  @override
+  MaterialColor color = TetrinosColors.tetrinosColors[TetrinosNames.o];
+
+  @override
+  int columnsLength;
+
+  @override
+  List<int> currentPosition = [];
+  @override
+  List<int> initialPosition = [];
+
+  Test({required this.columnsLength}) {
+    initialPosition = List.generate(columnsLength * 5, (index) => index);
+    currentPosition = List.generate(columnsLength * 5, (index) => index);
+  }
+
+  @override
+  List<int> fourToOne(int columnsLength) {
+    return currentPosition;
+  }
+
+  @override
+  List<int> oneToTwo(int columnsLength) {
+    return currentPosition;
+  }
+
+  @override
+  String positionSymbol = 'one';
+
+  @override
+  List<int> twoToThree(int columnsLength) {
+    return currentPosition;
+  }
+
+  @override
+  List<int> threeToFour(int columnsLength) {
+    return currentPosition;
+  }
+}
