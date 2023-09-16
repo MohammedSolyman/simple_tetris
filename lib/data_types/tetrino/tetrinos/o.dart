@@ -10,22 +10,19 @@ class O implements TetrinoBase {
   @override
   int columnsLength;
 
-  O({required this.columnsLength});
+  @override
+  List<int> currentPosition = [];
+  @override
+  List<int> initialPosition = [];
 
-  @override
-  List<int> currentPosition = [
-    -16,
-    -15,
-    -6,
-    -5,
-  ];
-  @override
-  List<int> initialPosition = [
-    -16,
-    -15,
-    -6,
-    -5,
-  ];
+  O({required this.columnsLength}) {
+    int i0 = (((columnsLength / 2).floor()) - 1) - (2 * columnsLength);
+    int i1 = i0 + 1;
+    int i2 = i0 + columnsLength;
+    int i3 = i0 + columnsLength + 1;
+    initialPosition = [i0, i1, i2, i3];
+    currentPosition = [i0, i1, i2, i3];
+  }
 
   @override
   List<int> fourToOne(int columnsLength) {

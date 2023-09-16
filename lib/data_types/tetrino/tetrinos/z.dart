@@ -19,7 +19,14 @@ class Z implements TetrinoBase {
   @override
   int columnsLength;
 
-  Z({required this.columnsLength});
+  Z({required this.columnsLength}) {
+    int i0 = (((columnsLength / 2).floor()) - 1) - (2 * columnsLength) - 1;
+    int i1 = i0 + 1;
+    int i2 = i0 + columnsLength + 1;
+    int i3 = i0 + columnsLength + 2;
+    initialPosition = [i0, i1, i2, i3];
+    currentPosition = [i0, i1, i2, i3];
+  }
 
   @override
   List<int> fourToOne(int columnsLength) {

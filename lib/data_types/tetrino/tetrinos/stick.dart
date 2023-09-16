@@ -8,10 +8,10 @@ class Stick implements TetrinoBase {
   MaterialColor color = TetrinosColors.tetrinosColors[TetrinosNames.stick];
 
   @override
-  List<int> currentPosition = [-26, -16, -6];
+  List<int> currentPosition = [];
 
   @override
-  List<int> initialPosition = [-26, -16, -6];
+  List<int> initialPosition = [];
 
   @override
   String positionSymbol = 'one';
@@ -19,7 +19,13 @@ class Stick implements TetrinoBase {
   @override
   int columnsLength;
 
-  Stick({required this.columnsLength});
+  Stick({required this.columnsLength}) {
+    int i0 = (((columnsLength / 2).floor()) - 1) - (3 * columnsLength);
+    int i1 = i0 + columnsLength;
+    int i2 = i0 + (2 * columnsLength);
+    initialPosition = [i0, i1, i2];
+    currentPosition = [i0, i1, i2];
+  }
 
   @override
   List<int> fourToOne(int columnsLength) {

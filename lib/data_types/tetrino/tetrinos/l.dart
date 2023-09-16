@@ -8,10 +8,10 @@ class L implements TetrinoBase {
   MaterialColor color = TetrinosColors.tetrinosColors[TetrinosNames.l];
 
   @override
-  List<int> currentPosition = [-26, -16, -6, -5];
+  List<int> currentPosition = [];
 
   @override
-  List<int> initialPosition = [-26, -16, -6, -5];
+  List<int> initialPosition = [];
 
   @override
   String positionSymbol = 'one';
@@ -19,7 +19,14 @@ class L implements TetrinoBase {
   @override
   int columnsLength;
 
-  L({required this.columnsLength});
+  L({required this.columnsLength}) {
+    int i0 = (((columnsLength / 2).floor()) - 1) - (3 * columnsLength);
+    int i1 = i0 + columnsLength;
+    int i2 = i0 + (2 * columnsLength);
+    int i3 = i0 + (2 * columnsLength) + 1;
+    initialPosition = [i0, i1, i2, i3];
+    currentPosition = [i0, i1, i2, i3];
+  }
 
   @override
   List<int> fourToOne(int columnsLength) {
