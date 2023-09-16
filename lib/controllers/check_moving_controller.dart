@@ -42,8 +42,8 @@ class CheckMovingController extends AudioController {
     List<int> right = temp.map((e) => e + 1).toList();
 
     for (var i = 0; i < temp.length; i++) {
-      int tempRow = (temp[i] / gridModel.value.columnsLength).floor();
-      int rightRow = (right[i] / gridModel.value.columnsLength).floor();
+      int tempRow = (temp[i] / gridModel.value.level.columnsLength).floor();
+      int rightRow = (right[i] / gridModel.value.level.columnsLength).floor();
 
       if (tempRow == rightRow) {
       } else {
@@ -62,8 +62,8 @@ class CheckMovingController extends AudioController {
     List<int> left = temp.map((e) => e - 1).toList();
 
     for (var i = 0; i < temp.length; i++) {
-      int tempRow = (temp[i] / gridModel.value.columnsLength).floor();
-      int leftRow = (left[i] / gridModel.value.columnsLength).floor();
+      int tempRow = (temp[i] / gridModel.value.level.columnsLength).floor();
+      int leftRow = (left[i] / gridModel.value.level.columnsLength).floor();
 
       if (tempRow == leftRow) {
       } else {
@@ -85,7 +85,7 @@ class CheckMovingController extends AudioController {
     //all cells in the new position are still in the grid.
     List<int> temp = gridModel.value.currentTetrino!.currentPosition;
     List<int> down =
-        temp.map((e) => e + gridModel.value.columnsLength).toList();
+        temp.map((e) => e + gridModel.value.level.columnsLength).toList();
 
     bool inGrid =
         down.every((element) => element < gridModel.value.cells.length);
@@ -121,8 +121,9 @@ class CheckMovingController extends AudioController {
     for (int i = 0; i < temp.length; i++) {
       if ((i + 1) < temp.length) {
         if ((temp[i] - temp[i + 1]).abs() == 1) {
-          int thisRow = (temp[i] / gridModel.value.columnsLength).floor();
-          int nextRow = (temp[i + 1] / gridModel.value.columnsLength).floor();
+          int thisRow = (temp[i] / gridModel.value.level.columnsLength).floor();
+          int nextRow =
+              (temp[i + 1] / gridModel.value.level.columnsLength).floor();
           if (thisRow != nextRow) {
             x = false;
           }

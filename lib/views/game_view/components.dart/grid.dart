@@ -19,8 +19,8 @@ class Grid extends StatelessWidget {
             // shrinkWrap: true,
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 10),
-            itemCount: controller.gridModel.value.columnsLength *
-                controller.gridModel.value.rowsLength,
+            itemCount: controller.gridModel.value.level.columnsLength *
+                controller.gridModel.value.level.rowsLength,
             itemBuilder: (BuildContext context, int index) {
               return CellTemplate(
                 index,

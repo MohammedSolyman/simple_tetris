@@ -19,7 +19,7 @@ class Controller extends InitializationController {
     playAudio(MyAudio.start);
     gridModel.update((val) {
       val!.timer =
-          Timer.periodic(const Duration(seconds: 1), (Timer timer) async {
+          Timer.periodic(gridModel.value.level.duration, (Timer timer) async {
         print(timer.tick);
 
         if (isInNotOccupiedDown()) {

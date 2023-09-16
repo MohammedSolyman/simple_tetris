@@ -12,9 +12,11 @@ import 'package:simple_tetris/data_types/tetrino/tetrinos/z.dart';
 
 class InitializationController extends RotationController {
   initializeGrid() {
-    for (int rowIndex = 0; rowIndex < gridModel.value.rowsLength; rowIndex++) {
+    for (int rowIndex = 0;
+        rowIndex < gridModel.value.level.rowsLength;
+        rowIndex++) {
       for (int columnIndex = 0;
-          columnIndex < gridModel.value.columnsLength;
+          columnIndex < gridModel.value.level.columnsLength;
           columnIndex++) {
         Cell cell = Cell();
 
@@ -30,37 +32,37 @@ class InitializationController extends RotationController {
     switch (tetrinoName) {
       case TetrinosNames.l:
         gridModel.value.currentTetrino =
-            L(columnsLength: gridModel.value.columnsLength);
+            L(columnsLength: gridModel.value.level.columnsLength);
         break;
 
       case TetrinosNames.stick:
         gridModel.value.currentTetrino =
-            Stick(columnsLength: gridModel.value.columnsLength);
+            Stick(columnsLength: gridModel.value.level.columnsLength);
         break;
 
       case TetrinosNames.dash:
         gridModel.value.currentTetrino =
-            Dash(columnsLength: gridModel.value.columnsLength);
+            Dash(columnsLength: gridModel.value.level.columnsLength);
         break;
 
       case TetrinosNames.s:
         gridModel.value.currentTetrino =
-            S(columnsLength: gridModel.value.columnsLength);
+            S(columnsLength: gridModel.value.level.columnsLength);
         break;
 
       case TetrinosNames.z:
         gridModel.value.currentTetrino =
-            Z(columnsLength: gridModel.value.columnsLength);
+            Z(columnsLength: gridModel.value.level.columnsLength);
         break;
 
       case TetrinosNames.t:
         gridModel.value.currentTetrino =
-            T(columnsLength: gridModel.value.columnsLength);
+            T(columnsLength: gridModel.value.level.columnsLength);
         break;
 
       case TetrinosNames.o:
         gridModel.value.currentTetrino =
-            O(columnsLength: gridModel.value.columnsLength);
+            O(columnsLength: gridModel.value.level.columnsLength);
         break;
 
       default:

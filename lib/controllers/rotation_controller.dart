@@ -32,22 +32,22 @@ class RotationController extends MovingController {
     if (gridModel.value.currentTetrino!.positionSymbol == 'one') {
       _changePostion(
           gridModel.value.currentTetrino!
-              .oneToTwo(gridModel.value.columnsLength),
+              .oneToTwo(gridModel.value.level.columnsLength),
           'two');
     } else if (gridModel.value.currentTetrino!.positionSymbol == 'two') {
       _changePostion(
           gridModel.value.currentTetrino!
-              .twoToThree(gridModel.value.columnsLength),
+              .twoToThree(gridModel.value.level.columnsLength),
           'three');
     } else if (gridModel.value.currentTetrino!.positionSymbol == 'three') {
       _changePostion(
           gridModel.value.currentTetrino!
-              .threeToFour(gridModel.value.columnsLength),
+              .threeToFour(gridModel.value.level.columnsLength),
           'four');
     } else if (gridModel.value.currentTetrino!.positionSymbol == 'four') {
       _changePostion(
           gridModel.value.currentTetrino!
-              .fourToOne(gridModel.value.columnsLength),
+              .fourToOne(gridModel.value.level.columnsLength),
           'one');
     }
   }

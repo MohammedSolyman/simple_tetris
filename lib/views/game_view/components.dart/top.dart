@@ -12,9 +12,16 @@ class Top extends StatelessWidget {
     Controller controller = Get.find<Controller>();
 
     return Obx(() {
-      return Container(
-          color: Colors.grey,
-          child: Text(controller.gridModel.value.cells.length.toString()));
+      return Padding(
+        padding: const EdgeInsets.only(top: 30),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('level: ${controller.gridModel.value.level.level}'),
+            Text('points: ${controller.gridModel.value.points.toString()}'),
+          ],
+        ),
+      );
     });
   }
 }

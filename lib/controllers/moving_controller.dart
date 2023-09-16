@@ -41,7 +41,7 @@ class MovingController extends ScoreController {
 
       gridModel.update((val) {
         for (var i = 0; i < val!.currentTetrino!.currentPosition.length; i++) {
-          val.currentTetrino!.currentPosition[i] += val.columnsLength;
+          val.currentTetrino!.currentPosition[i] += val.level.columnsLength;
         }
       });
 
