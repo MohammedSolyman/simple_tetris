@@ -10,12 +10,8 @@ git push https://github.com/MohammedSolyman/simple_tetris.git master
 
 
 
-down move
-generalization of start position
-all rotatios are clockwise
-winngig
-game over
-rotation
+
+
 
 */
 void main() {

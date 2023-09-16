@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 abstract class TetrinoBase {
+  //the color of the tetrino
   MaterialColor color;
+
   //currentPosition changes every tick, and changes aslo when user change
   //positons, initially it takes the values of the initial position.
   List<int> currentPosition;
@@ -13,10 +15,13 @@ abstract class TetrinoBase {
   //positions symbols: one, two, three, four.
   String positionSymbol = 'one';
 
-  TetrinoBase(this.color, this.currentPosition, this.initialPosition);
+  int columnsLength;
+
+  TetrinoBase(this.columnsLength, this.color, this.currentPosition,
+      this.initialPosition);
 
   //when changing, change the lowest index of the current position to the lowesest
-  // index of the new position.
+  //index of the new position.
   //change from position four to position one.
   List<int> fourToOne(int columnsLength);
 

@@ -17,6 +17,11 @@ class Dash implements TetrinoBase {
   List<int> initialPosition = [-9, -8, -7];
 
   @override
+  int columnsLength;
+
+  Dash({required this.columnsLength});
+
+  @override
   List<int> fourToOne(int columnsLength) {
     int new0 = (currentPosition[0] + columnsLength) - 1;
     int new1 = currentPosition[1];

@@ -8,6 +8,11 @@ class O implements TetrinoBase {
   MaterialColor color = TetrinosColors.tetrinosColors[TetrinosNames.o];
 
   @override
+  int columnsLength;
+
+  O({required this.columnsLength});
+
+  @override
   List<int> currentPosition = [
     -16,
     -15,

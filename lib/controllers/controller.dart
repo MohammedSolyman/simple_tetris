@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:simple_tetris/constants/my_audio.dart';
-import 'package:simple_tetris/controllers/initial_controller.dart';
+import 'package:simple_tetris/controllers/initialization_controller.dart';
 
 /*
 Controller
@@ -13,7 +13,7 @@ AudioController
 ColorController
 GetxController
 */
-class Controller extends InitialController {
+class Controller extends InitializationController {
   start() {
     initializeCurrentTetrino();
     playAudio(MyAudio.start);

@@ -29,31 +29,38 @@ class InitializationController extends RotationController {
 
     switch (tetrinoName) {
       case TetrinosNames.l:
-        gridModel.value.currentTetrino = L();
+        gridModel.value.currentTetrino =
+            L(columnsLength: gridModel.value.columnsLength);
         break;
 
       case TetrinosNames.stick:
-        gridModel.value.currentTetrino = Stick();
+        gridModel.value.currentTetrino =
+            Stick(columnsLength: gridModel.value.columnsLength);
         break;
 
       case TetrinosNames.dash:
-        gridModel.value.currentTetrino = Dash();
+        gridModel.value.currentTetrino =
+            Dash(columnsLength: gridModel.value.columnsLength);
         break;
 
       case TetrinosNames.s:
-        gridModel.value.currentTetrino = S();
+        gridModel.value.currentTetrino =
+            S(columnsLength: gridModel.value.columnsLength);
         break;
 
       case TetrinosNames.z:
-        gridModel.value.currentTetrino = Z();
+        gridModel.value.currentTetrino =
+            Z(columnsLength: gridModel.value.columnsLength);
         break;
 
       case TetrinosNames.t:
-        gridModel.value.currentTetrino = T();
+        gridModel.value.currentTetrino =
+            T(columnsLength: gridModel.value.columnsLength);
         break;
 
       case TetrinosNames.o:
-        gridModel.value.currentTetrino = O();
+        gridModel.value.currentTetrino =
+            O(columnsLength: gridModel.value.columnsLength);
         break;
 
       default:

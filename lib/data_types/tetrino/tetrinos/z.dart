@@ -17,6 +17,11 @@ class Z implements TetrinoBase {
   String positionSymbol = 'one';
 
   @override
+  int columnsLength;
+
+  Z({required this.columnsLength});
+
+  @override
   List<int> fourToOne(int columnsLength) {
     int new0 = (currentPosition[0] + columnsLength) - 2;
     int new1 = currentPosition[1];

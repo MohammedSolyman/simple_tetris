@@ -17,6 +17,11 @@ class Stick implements TetrinoBase {
   String positionSymbol = 'one';
 
   @override
+  int columnsLength;
+
+  Stick({required this.columnsLength});
+
+  @override
   List<int> fourToOne(int columnsLength) {
     int new0 = (currentPosition[0] - columnsLength) + 1;
     int new1 = currentPosition[1];
@@ -46,6 +51,5 @@ class Stick implements TetrinoBase {
     int new1 = currentPosition[1];
     int new2 = (currentPosition[2] - columnsLength) + 1;
     return [new0, new1, new2];
-    ;
   }
 }

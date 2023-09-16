@@ -26,9 +26,8 @@ class ScoreController extends CheckMovingController {
         await _destroyLine(i);
         _shiftDown(i);
         i = i + gridModel.value.columnsLength;
-        print('before line completed -------------------------------');
+
         playAudio(MyAudio.lineCompleted);
-        print('after line completed -------------------------------');
       }
     }
   }
