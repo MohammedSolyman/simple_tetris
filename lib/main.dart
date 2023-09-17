@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:simple_tetris/controllers/controller.dart';
-import 'package:simple_tetris/views/game.dart';
+import 'package:simple_tetris/views/splash_sreen_view/splash_screen_view.dart';
 
 /*
 git push https://github.com/MohammedSolyman/simple_tetris.git master
@@ -17,9 +16,8 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Get.put(Controller());
     return const GetMaterialApp(
-      home: Game(),
+      home: SplashScreenView(),
     );
   }
 }
