@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:simple_tetris/controllers/controller.dart';
-import 'package:simple_tetris/widgets/cell_template.dart';
+import 'package:simple_tetris/widgets/cell_template/cell_template.dart';
 
 class Grid extends StatelessWidget {
   const Grid({

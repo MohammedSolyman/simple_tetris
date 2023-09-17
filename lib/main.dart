@@ -21,3 +21,30 @@ class MainApp extends StatelessWidget {
     );
   }
 }
+
+// class MyTest extends StatefulWidget {
+//   const MyTest({super.key});
+
+//   @override
+//   State<MyTest> createState() => _MyTestState();
+// }
+
+// class _MyTestState extends State<MyTest> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: Center(
+//         child: ElevatedButton(
+//             onPressed: () async {
+//               Future.delayed(Duration(seconds: 4)).then((value) {
+//                 Get.back();
+//               });
+//               await dialogLineComplete();
+
+//               print('after ----------------------');
+//             },
+//             child: Text('data')),
+//       ),
+//     );
+//   }
+// }

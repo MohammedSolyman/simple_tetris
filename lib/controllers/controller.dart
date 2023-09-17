@@ -18,6 +18,13 @@ ColorController
 GetxController
 */
 class Controller extends InitializationController {
+  restart() {
+    gridModel.update((val) {
+      val!.level = GridConstants.one;
+    });
+    start();
+  }
+
   start() {
     gridModel.update((val) {
       val!.cells = [];
@@ -35,6 +42,7 @@ class Controller extends InitializationController {
         } else {
           land();
           await lineComplete();
+          await gameOver();
           initializeCurrentTetrino();
           changeLevel();
         }
