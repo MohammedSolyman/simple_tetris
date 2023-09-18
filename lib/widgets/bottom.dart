@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:simple_tetris/controllers/controller.dart';
 
-class Botton extends StatelessWidget {
-  const Botton({
+class Bottom extends StatelessWidget {
+  const Bottom({
     super.key,
   });
 

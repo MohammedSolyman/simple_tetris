@@ -1,10 +1,9 @@
 import 'dart:async';
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:simple_tetris/constants/grid_constants.dart';
 import 'package:simple_tetris/constants/my_audio.dart';
 import 'package:simple_tetris/controllers/initialization_controller.dart';
 import 'package:simple_tetris/data_types/level/level.dart';
+import 'package:simple_tetris/widgets/dialoge_game_over.dart';
 
 /*
 Controller
@@ -79,10 +78,7 @@ class Controller extends InitializationController {
       val!.timer!.cancel();
     });
     gridModel.update((val) async {
-      Get.defaultDialog(
-          content: const Text('GOOOD JOB'), barrierDismissible: false);
-      await Future.delayed(const Duration(seconds: 4));
-      Get.back();
+      await dialogLevelCompleted();
       val!.level = level;
       start();
     });

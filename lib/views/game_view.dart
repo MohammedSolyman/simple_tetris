@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:simple_tetris/controllers/controller.dart';
-import 'package:simple_tetris/widgets/botton.dart';
+import 'package:simple_tetris/widgets/bottom.dart';
 import 'package:simple_tetris/widgets/grid.dart';
 import 'package:simple_tetris/widgets/top.dart';
 
@@ -39,7 +39,7 @@ class _GameViewState extends State<GameView>
           children: [
             Top(),
             Grid(),
-            Botton(),
+            Bottom(),
           ],
         ));
   }
