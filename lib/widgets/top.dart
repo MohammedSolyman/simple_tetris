@@ -30,17 +30,27 @@ class TwoIcons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        SizedBox(
-          width: 60,
-          height: 60,
-          child: InkWell(
-              child: Image.asset('assets/in_app_icons/play/red_pause.png')),
-        ),
-        const SettingsButton(40, 40)
-      ],
-    );
+    Controller controller = Get.find<Controller>();
+    return Obx(() {
+      return Row(
+        children: [
+          SizedBox(
+            width: 60,
+            height: 60,
+            child: InkWell(
+                onTap: () {
+                  controller.gridModel.value.isPlaying
+                      ? controller.pause()
+                      : controller.resume();
+                },
+                child: controller.gridModel.value.isPlaying
+                    ? Image.asset('assets/in_app_icons/play/red_pause.png')
+                    : Image.asset('assets/in_app_icons/play/red_resume.png')),
+          ),
+          const SettingsButton(40, 40)
+        ],
+      );
+    });
   }
 }
 

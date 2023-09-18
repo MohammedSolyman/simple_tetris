@@ -35,16 +35,18 @@ class Controller extends InitializationController {
     gridModel.update((val) {
       val!.timer =
           Timer.periodic(gridModel.value.level.duration, (Timer timer) async {
-        print(timer.tick);
+        if (val.isPlaying) {
+          print(timer.tick);
 
-        if (isInNotOccupiedDown()) {
-          moveDown();
-        } else {
-          land();
-          await lineComplete();
-          await gameOver();
-          initializeCurrentTetrino();
-          changeLevel();
+          if (isInNotOccupiedDown()) {
+            moveDown();
+          } else {
+            land();
+            await lineComplete();
+            await gameOver();
+            initializeCurrentTetrino();
+            changeLevel();
+          }
         }
       });
     });
@@ -83,6 +85,18 @@ class Controller extends InitializationController {
       Get.back();
       val!.level = level;
       start();
+    });
+  }
+
+  void pause() {
+    gridModel.update((val) {
+      val!.isPlaying = false;
+    });
+  }
+
+  void resume() {
+    gridModel.update((val) {
+      val!.isPlaying = true;
     });
   }
 
