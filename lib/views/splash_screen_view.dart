@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
-import 'package:simple_tetris/views/home_view/home_view.dart';
+import 'package:simple_tetris/views/home_view.dart';
 
 class SplashScreenView extends StatefulWidget {
   const SplashScreenView({super.key});
@@ -19,7 +19,7 @@ class _SplashScreenViewState extends State<SplashScreenView>
   void initState() {
     super.initState();
 
-    SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
     animationController = AnimationController(vsync: this);
   }
 

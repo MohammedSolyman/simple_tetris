@@ -3,7 +3,8 @@ import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:simple_tetris/views/game_view/game_view.dart';
+import 'package:simple_tetris/views/game_view.dart';
+import 'package:simple_tetris/widgets/setting_button/setting_button.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -18,7 +19,7 @@ class _HomeViewState extends State<HomeView>
   void initState() {
     super.initState();
 
-    SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
   }
 
   @override
@@ -43,14 +44,12 @@ class _HomeViewState extends State<HomeView>
                       image: AssetImage('assets/images/home6.png'),
                       fit: BoxFit.cover)),
             ),
-            Positioned(
+            const Positioned(
               top: 15,
               right: 0,
               child: AvatarGlow(
                 endRadius: 60,
-                child: InkWell(
-                    child:
-                        Image.asset('assets/in_app_icons/icons/settings.png')),
+                child: SettingsButton(100, 100),
               ),
             ),
             Positioned(

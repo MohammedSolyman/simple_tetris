@@ -1,7 +1,7 @@
 import 'package:simple_tetris/constants/my_audio.dart';
 import 'package:simple_tetris/constants/my_colors.dart';
 import 'package:simple_tetris/controllers/check_moving_controller.dart';
-import 'package:simple_tetris/widgets/dialog_game_over/dialoge_game_over.dart';
+import 'package:simple_tetris/widgets/dialoge_game_over.dart';
 
 class ScoreController extends CheckMovingController {
   Future<void> lineComplete() async {

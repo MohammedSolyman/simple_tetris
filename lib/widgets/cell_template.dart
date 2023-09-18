@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 
 class CellTemplate extends StatelessWidget {
-  const CellTemplate(this.no, {required this.color, super.key});
+  const CellTemplate({required this.color, super.key});
 
-  final int no;
   final MaterialColor color;
   @override
   Widget build(BuildContext context) {
@@ -38,7 +37,6 @@ class CellTemplate extends StatelessWidget {
                 borderRadius: BorderRadius.circular(7),
                 color: color.shade600,
               ),
-              child: Text(no.toString()),
             ),
           ),
         ),
