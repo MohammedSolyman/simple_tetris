@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:simple_tetris/Services/database/database_helper.dart';
 
 class SettingsButton extends StatelessWidget {
   const SettingsButton(this.width, this.height, {super.key});
@@ -11,8 +12,12 @@ class SettingsButton extends StatelessWidget {
     return SizedBox(
       width: width,
       height: height,
-      child:
-          InkWell(child: Image.asset('assets/in_app_icons/icons/settings.png')),
+      child: InkWell(
+          onTap: () async {
+            DatabaseHelper helper = DatabaseHelper();
+            await helper.read();
+          },
+          child: Image.asset('assets/in_app_icons/icons/settings.png')),
     );
   }
 }

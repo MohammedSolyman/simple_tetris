@@ -25,7 +25,9 @@ Future<dynamic> dialogGameOver() {
                     style: GoogleFonts.croissantOne(fontSize: 25),
                   )),
               TextButton(
-                  onPressed: () {},
+                  onPressed: () async {
+                    await controller.exit();
+                  },
                   child: Text('exit',
                       style: GoogleFonts.croissantOne(fontSize: 25)))
             ],

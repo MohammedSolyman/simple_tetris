@@ -5,6 +5,8 @@ import 'package:simple_tetris/data_types/level/level.dart';
 import 'package:simple_tetris/data_types/tetrino/tetrino_base.dart';
 
 class GridModel {
+  //current user name
+  String? name;
   //the game starts with level one, and increases whenever the user complete a
   //level.
   Level level = GridConstants.one;

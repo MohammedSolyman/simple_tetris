@@ -1,6 +1,9 @@
 import 'dart:async';
+import 'package:get/get.dart';
+import 'package:simple_tetris/Services/database/database_helper.dart';
 import 'package:simple_tetris/constants/grid_constants.dart';
 import 'package:simple_tetris/constants/my_audio.dart';
+import 'package:simple_tetris/controllers/home_page_controller.dart';
 import 'package:simple_tetris/controllers/initialization_controller.dart';
 import 'package:simple_tetris/data_types/level/level.dart';
 import 'package:simple_tetris/widgets/dialoge_game_over.dart';
@@ -17,6 +20,8 @@ ColorController
 GetxController
 */
 class Controller extends InitializationController {
+  HompePageController hompePageController = Get.put(HompePageController());
+
   restart() {
     gridModel.update((val) {
       val!.level = GridConstants.one;
@@ -93,6 +98,23 @@ class Controller extends InitializationController {
   void resume() {
     gridModel.update((val) {
       val!.isPlaying = true;
+    });
+  }
+
+  exit() async {
+    DatabaseHelper helper = DatabaseHelper();
+
+    Map<String, dynamic> map = {
+      'name': gridModel.value.name,
+      'score': gridModel.value.points,
+    };
+
+    await helper.create(map);
+  }
+
+  updateName(String name) {
+    gridModel.update((val) {
+      val!.name = name;
     });
   }
 

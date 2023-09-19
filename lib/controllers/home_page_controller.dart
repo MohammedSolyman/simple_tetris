@@ -5,7 +5,13 @@ import 'package:simple_tetris/views/game_view.dart';
 class HompePageController extends GetxController {
   Rx<HomePageModel> homePageModel = HomePageModel().obs;
 
-  goToGame() {
-    Get.off(const GameView());
+  void goToGame(String name) {
+    Get.off(GameView(
+      name: name,
+    ));
+  }
+
+  String getName() {
+    return homePageModel.value.textEditingController.text;
   }
 }

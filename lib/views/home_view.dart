@@ -69,6 +69,8 @@ class _HomeViewState extends State<HomeView>
                         child: Form(
                       key: globalKey,
                       child: TextFormField(
+                        controller: hompePageController
+                            .homePageModel.value.textEditingController,
                         autovalidateMode: AutovalidateMode.always,
                         validator: (String? value) {
                           if (value!.isEmpty) {
@@ -105,7 +107,8 @@ class _HomeViewState extends State<HomeView>
                           onTap: () {
                             FormState? formState = globalKey.currentState;
                             if (formState!.validate()) {
-                              hompePageController.goToGame();
+                              hompePageController
+                                  .goToGame(hompePageController.getName());
                             }
                           },
                           child: Image.asset(

@@ -7,7 +7,8 @@ import 'package:simple_tetris/widgets/grid.dart';
 import 'package:simple_tetris/widgets/top.dart';
 
 class GameView extends StatefulWidget {
-  const GameView({super.key});
+  final String name;
+  const GameView({required this.name, super.key});
 
   @override
   State<GameView> createState() => _GameViewState();
@@ -31,8 +32,8 @@ class _GameViewState extends State<GameView>
 
   @override
   Widget build(BuildContext context) {
-    Get.put(Controller());
-
+    Controller controller = Get.put(Controller());
+    controller.updateName(widget.name);
     return const Scaffold(
         backgroundColor: Colors.black,
         body: Column(
