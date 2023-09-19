@@ -31,7 +31,8 @@ flutter:
     - assets/animated_files/
     - assets/app_icons/
     - assets/audio/
-    - assets/images/
+    - assets/images/home/
+    - assets/images/top_list/
     - assets/in_app_icons/arrows/
     - assets/in_app_icons/icons/
     - assets/in_app_icons/play/

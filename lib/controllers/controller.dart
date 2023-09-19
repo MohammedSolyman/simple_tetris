@@ -1,12 +1,12 @@
 import 'dart:async';
 import 'package:get/get.dart';
-import 'package:simple_tetris/Services/database/database_helper.dart';
+import 'package:simple_tetris/services/database/database_helper.dart';
 import 'package:simple_tetris/constants/grid_constants.dart';
 import 'package:simple_tetris/constants/my_audio.dart';
 import 'package:simple_tetris/controllers/home_page_controller.dart';
 import 'package:simple_tetris/controllers/initialization_controller.dart';
 import 'package:simple_tetris/data_types/level/level.dart';
-import 'package:simple_tetris/widgets/dialoge_game_over.dart';
+import 'package:simple_tetris/widgets/dialoges/dialog_level_completed.dart';
 
 /*
 Controller

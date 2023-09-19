@@ -1,7 +1,7 @@
 import 'package:simple_tetris/constants/my_audio.dart';
 import 'package:simple_tetris/constants/my_colors.dart';
 import 'package:simple_tetris/controllers/check_moving_controller.dart';
-import 'package:simple_tetris/widgets/dialoge_game_over.dart';
+import 'package:simple_tetris/widgets/dialoges/dialog_game_over.dart';
 
 class ScoreController extends CheckMovingController {
   Future<void> lineComplete() async {
@@ -30,7 +30,7 @@ class ScoreController extends CheckMovingController {
         _shiftDown(i);
         _addPoints();
         playAudio(MyAudio.lineCompleted);
-        //  await dialogLineComplete();
+        //  await dialogLineCompleted();
         i = i + gridModel.value.level.columnsLength;
       }
     }

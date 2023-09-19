@@ -1,4 +1,4 @@
-import 'package:simple_tetris/Services/database/database.dart';
+import 'package:simple_tetris/services/database/database.dart';
 import 'package:simple_tetris/constants/database_constants.dart';
 import 'package:sqflite/sqflite.dart';
 

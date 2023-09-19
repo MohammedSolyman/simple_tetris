@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:simple_tetris/controllers/controller.dart';
-import 'package:simple_tetris/widgets/bottom.dart';
-import 'package:simple_tetris/widgets/grid.dart';
-import 'package:simple_tetris/widgets/top.dart';
+import 'package:simple_tetris/widgets/bottom/bottom.dart';
+import 'package:simple_tetris/widgets/grid/grid.dart';
+import 'package:simple_tetris/widgets/top/top.dart';
 
 class GameView extends StatefulWidget {
   final String name;

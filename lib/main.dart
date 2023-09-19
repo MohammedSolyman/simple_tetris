@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
 import 'package:simple_tetris/views/splash_screen_view.dart';
 
 /*
