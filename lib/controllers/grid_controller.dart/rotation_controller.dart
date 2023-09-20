@@ -1,4 +1,4 @@
-import 'package:simple_tetris/controllers/moving_controller.dart';
+import 'package:simple_tetris/controllers/grid_controller.dart/moving_controller.dart';
 
 class RotationController extends MovingController {
   void _changeCurrentPositionAndSymbol(List<int> temp, String to) {

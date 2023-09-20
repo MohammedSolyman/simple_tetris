@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:simple_tetris/controllers/controller.dart';
+import 'package:simple_tetris/controllers/grid_controller.dart/controller.dart';
 import 'package:simple_tetris/widgets/setting_menu/setting_menu.dart';
 
 class TwoIcons extends StatelessWidget {

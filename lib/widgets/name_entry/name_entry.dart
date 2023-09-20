@@ -2,7 +2,7 @@ import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:simple_tetris/controllers/home_page_controller.dart';
+import 'package:simple_tetris/controllers/home_page_controller/home_page_controller.dart';
 
 class NameEntry extends StatelessWidget {
   NameEntry({

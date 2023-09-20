@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:simple_tetris/controllers/controller.dart';
+import 'package:simple_tetris/controllers/grid_controller.dart/controller.dart';
 
 class MiddlePart extends StatelessWidget {
   const MiddlePart({super.key});

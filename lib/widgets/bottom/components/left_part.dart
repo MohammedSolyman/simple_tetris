@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:simple_tetris/controllers/controller.dart';
+import 'package:simple_tetris/controllers/grid_controller.dart/controller.dart';
 
 class LeftPart extends StatelessWidget {
   const LeftPart({super.key});

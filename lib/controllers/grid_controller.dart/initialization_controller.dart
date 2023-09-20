@@ -1,5 +1,5 @@
 import 'dart:math';
-import 'package:simple_tetris/controllers/rotation_controller.dart';
+import 'package:simple_tetris/controllers/grid_controller.dart/rotation_controller.dart';
 import 'package:simple_tetris/data_types/cell/cell.dart';
 import 'package:simple_tetris/data_types/tetrino/tetrino_names.dart';
 import 'package:simple_tetris/data_types/tetrino/tetrinos/dash.dart';

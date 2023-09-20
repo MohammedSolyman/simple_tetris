@@ -1,6 +1,6 @@
 import 'package:simple_tetris/constants/my_audio.dart';
 import 'package:simple_tetris/constants/my_colors.dart';
-import 'package:simple_tetris/controllers/check_moving_controller.dart';
+import 'package:simple_tetris/controllers/grid_controller.dart/check_moving_controller.dart';
 import 'package:simple_tetris/widgets/dialoges/dialog_game_over.dart';
 
 class ScoreController extends CheckMovingController {

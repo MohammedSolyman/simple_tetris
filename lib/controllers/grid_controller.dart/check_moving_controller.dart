@@ -1,4 +1,4 @@
-import 'package:simple_tetris/controllers/audio_controller.dart';
+import 'package:simple_tetris/controllers/grid_controller.dart/audio_controller.dart';
 
 class CheckMovingController extends AudioController {
   //before moving right or left, check the next move if it is valid commit it,

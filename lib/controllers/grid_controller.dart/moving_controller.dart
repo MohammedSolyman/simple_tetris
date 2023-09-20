@@ -1,4 +1,4 @@
-import 'package:simple_tetris/controllers/score_controller.dart';
+import 'package:simple_tetris/controllers/grid_controller.dart/score_controller.dart';
 
 class MovingController extends ScoreController {
   void moveRight() {

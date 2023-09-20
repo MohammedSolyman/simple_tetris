@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
-import 'package:simple_tetris/controllers/controller.dart';
+import 'package:simple_tetris/controllers/grid_controller.dart/controller.dart';
 
 Future<dynamic> dialogGameOver() {
   Controller controller = Get.put(Controller());

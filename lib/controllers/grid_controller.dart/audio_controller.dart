@@ -1,5 +1,5 @@
 import 'package:audioplayers/audioplayers.dart';
-import 'package:simple_tetris/controllers/color_controller.dart';
+import 'package:simple_tetris/controllers/grid_controller.dart/color_controller.dart';
 
 class AudioController extends ColorController {
   AudioPlayer player = AudioPlayer();

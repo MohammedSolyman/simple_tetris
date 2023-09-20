@@ -1,7 +1,6 @@
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:simple_tetris/services/database/database_helper.dart';
 import 'package:simple_tetris/views/top_list_view.dart';
 
 class SettingsButton extends StatelessWidget {
@@ -33,6 +32,12 @@ class SettingsMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton(
+        onSelected: (value) {
+          if (value == 1) {
+          } else {
+            Get.to(() => const TopListView());
+          }
+        },
         color: Colors.yellow.withOpacity(0.7),
         elevation: 20,
         constraints: const BoxConstraints(maxWidth: 180),
@@ -48,22 +53,24 @@ class SettingsMenu extends StatelessWidget {
         itemBuilder: (contex) {
           List<PopupMenuEntry<dynamic>> x = [
             PopupMenuItem(
+                value: 1,
                 child: Row(
-              children: [
-                Image.asset(
-                  'assets/in_app_icons/icons/sounds_off.png',
-                  height: 40,
-                ),
-                const Text('sound off')
-              ],
-            )),
+                  children: [
+                    Image.asset(
+                      'assets/in_app_icons/icons/sounds_off.png',
+                      height: 40,
+                    ),
+                    const Text('sound off')
+                  ],
+                )),
             PopupMenuItem(
-                onTap: () async {
-                  Get.back();
-                  Get.to(() => const TopListView());
-                  // DatabaseHelper helper = DatabaseHelper();
-                  // await helper.read();
-                },
+                value: 2,
+                // onTap: () {
+                //   //    Get.back();
+                // //  Get.to(() => const TopListView());
+                //   // DatabaseHelper helper = DatabaseHelper();
+                //   // await helper.read();
+                // },
                 child: Row(
                   children: [
                     Image.asset(

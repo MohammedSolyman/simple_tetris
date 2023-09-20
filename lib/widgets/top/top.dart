@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:simple_tetris/controllers/controller.dart';
+import 'package:simple_tetris/controllers/grid_controller.dart/controller.dart';
 import 'package:simple_tetris/widgets/setting_menu/setting_menu.dart';
 import 'package:simple_tetris/widgets/top/component/info.dart';
 

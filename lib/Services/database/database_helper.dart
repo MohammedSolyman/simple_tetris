@@ -20,10 +20,11 @@ class DatabaseHelper {
     return x;
   }
 
-  Future<List<Map<String, Object?>>> read() async {
+  Future<List<Map<String, dynamic>>> read() async {
     Database? db = await myDatabase.db;
-    List<Map<String, Object?>> x = await db!.rawQuery('''
+    List<Map<String, dynamic>> x = await db!.rawQuery('''
       SELECT * FROM ${DatabaseConstants.tableName}
+      ORDER BY ${DatabaseConstants.columnNameScore} DESC
       ''');
 
     print('database ----------------  $x');
