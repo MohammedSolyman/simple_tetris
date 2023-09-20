@@ -1,7 +1,7 @@
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:simple_tetris/views/top_list_view.dart';
+import 'package:simple_tetris/views/top_list_view/top_list_view.dart';
 
 class SettingsButton extends StatelessWidget {
   const SettingsButton(this.width, this.height, {super.key});

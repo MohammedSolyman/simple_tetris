@@ -6,7 +6,7 @@ import 'package:simple_tetris/constants/grid_constants.dart';
 import 'package:simple_tetris/constants/my_audio.dart';
 import 'package:simple_tetris/controllers/home_page_controller/home_page_controller.dart';
 import 'package:simple_tetris/data_types/level/level.dart';
-import 'package:simple_tetris/widgets/dialoges/dialog_level_completed.dart';
+import 'package:simple_tetris/views/game_view/components/dialoges/dialog_level_completed.dart';
 
 /*
 Controller

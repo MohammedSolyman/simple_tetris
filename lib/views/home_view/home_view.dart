@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:simple_tetris/widgets/name_entry/name_entry.dart';
-import 'package:simple_tetris/widgets/setting_menu/setting_menu.dart';
+import 'package:simple_tetris/views/home_view/component/name_entry/name_entry.dart';
+import 'package:simple_tetris/views/home_view/component/setting_menu.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});

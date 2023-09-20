@@ -31,7 +31,7 @@ class TopListController extends GetxController {
     await player.play(source);
   }
 
-  StopTopListSound() async {
+  stopTopListSound() async {
     await player.stop();
   }
 
@@ -45,13 +45,13 @@ class TopListController extends GetxController {
   @override
   void dispose() async {
     super.dispose();
-    await StopTopListSound();
+    await stopTopListSound();
     print('disposed ....................');
   }
 
   @override
   InternalFinalCallback<void> get onDelete {
-    StopTopListSound();
+    stopTopListSound();
     print('deleted ....................');
     return super.onDelete;
   }

@@ -21,4 +21,10 @@ class GridModel {
   //is the user play now? it is true if the uer is playing, if the game is pause
   //it will be false.
   bool isPlaying = true;
+  //is the row of settings icons visible or not, if the user clicks on the
+  //settings icons it truen true, if the user clicls on the settings icons again,
+  //it turns false;
+  bool isVisibleIcons = false;
+
+  bool isVolumeOn = true;
 }

@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 import 'package:simple_tetris/controllers/top_list_controller/top_list_controller.dart';
 import 'package:simple_tetris/data_types/player/player.dart';
-import 'package:simple_tetris/widgets/top_list_tile/top_list_tile.dart';
+import 'package:simple_tetris/views/top_list_view/components/top_list_tile.dart';
 import 'package:blur/blur.dart';
 
 class TopListView extends StatelessWidget {

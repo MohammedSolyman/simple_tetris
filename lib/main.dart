@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:simple_tetris/views/splash_screen_view.dart';
+import 'package:simple_tetris/views/splash_screen_view/splash_screen_view.dart';
 
 /*
 git push https://github.com/MohammedSolyman/simple_tetris.git master

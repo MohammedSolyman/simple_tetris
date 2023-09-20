@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:simple_tetris/widgets/bottom/components/left_part.dart';
-import 'package:simple_tetris/widgets/bottom/components/middle_part.dart';
-import 'package:simple_tetris/widgets/bottom/components/right_part.dart';
+import 'package:simple_tetris/views/game_view/components/bottom/components/left_part.dart';
+import 'package:simple_tetris/views/game_view/components/bottom/components/middle_part.dart';
+import 'package:simple_tetris/views/game_view/components/bottom/components/right_part.dart';
 
 class Bottom extends StatelessWidget {
   const Bottom({
