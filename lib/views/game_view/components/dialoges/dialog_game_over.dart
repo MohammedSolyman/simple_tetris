@@ -26,7 +26,8 @@ Future<dynamic> dialogGameOver() {
                   )),
               TextButton(
                   onPressed: () async {
-                    await controller.exit();
+                    await controller.saveScore();
+                    await controller.exitApp();
                   },
                   child: Text('exit',
                       style: GoogleFonts.croissantOne(fontSize: 25)))

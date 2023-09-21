@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:simple_tetris/controllers/grid_controller.dart/controller.dart';
 import 'package:simple_tetris/views/game_view/components/bottom/bottom.dart';
+import 'package:simple_tetris/views/game_view/components/dialoges/dialog_exit.dart';
 import 'package:simple_tetris/views/game_view/components/grid/grid.dart';
 import 'package:simple_tetris/views/game_view/components/top/top.dart';
 
@@ -34,14 +35,17 @@ class _GameViewState extends State<GameView>
   Widget build(BuildContext context) {
     Controller controller = Get.put(Controller());
     controller.updateName(widget.name);
-    return const Scaffold(
-        backgroundColor: Colors.black,
-        body: Column(
-          children: [
-            Top(),
-            Grid(),
-            Bottom(),
-          ],
-        ));
+    return const WillPopScope(
+      onWillPop: dialogExitBackArrow,
+      child: Scaffold(
+          backgroundColor: Colors.black,
+          body: Column(
+            children: [
+              Top(),
+              Grid(),
+              Bottom(),
+            ],
+          )),
+    );
   }
 }

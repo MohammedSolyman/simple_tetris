@@ -102,7 +102,7 @@ class Controller extends InitializationController {
     });
   }
 
-  exit() async {
+  Future<void> saveScore() async {
     //add player name and score to the database
     DatabaseHelper helper = DatabaseHelper();
 
@@ -113,13 +113,16 @@ class Controller extends InitializationController {
 
     await helper.create(map);
     //exit the application
-    SystemNavigator.pop();
   }
 
   updateName(String name) {
     gridModel.update((val) {
       val!.name = name;
     });
+  }
+
+  Future<void> exitApp() async {
+    await SystemNavigator.pop();
   }
 
   @override

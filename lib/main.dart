@@ -9,7 +9,7 @@ bug: when changing level, the last line is blank.
 
 
 
-exit button in game over dialogue was improved
+
 
 
 
