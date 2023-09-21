@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:simple_tetris/controllers/grid_controller.dart/initialization_controller.dart';
 import 'package:simple_tetris/services/database/database_helper.dart';
@@ -102,6 +103,7 @@ class Controller extends InitializationController {
   }
 
   exit() async {
+    //add player name and score to the database
     DatabaseHelper helper = DatabaseHelper();
 
     Map<String, dynamic> map = {
@@ -110,6 +112,8 @@ class Controller extends InitializationController {
     };
 
     await helper.create(map);
+    //exit the application
+    SystemNavigator.pop();
   }
 
   updateName(String name) {

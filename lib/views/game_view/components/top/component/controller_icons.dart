@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:simple_tetris/controllers/grid_controller.dart/controller.dart';
+import 'package:simple_tetris/views/game_view/components/dialoges/dialog_exitd.dart';
 
 class SoundControl extends StatelessWidget {
   const SoundControl({super.key});
@@ -63,8 +64,10 @@ class SettingsList extends StatelessWidget {
                       ),
                     ),
                     InkWell(
-                      onTap: () {},
-                      child: Image.asset('assets/in_app_icons/icons/sun.png',
+                      onTap: () async {
+                        await dialogExit();
+                      },
+                      child: Image.asset('assets/in_app_icons/icons/exit.png',
                           height: 40, width: 40),
                     )
                   ],

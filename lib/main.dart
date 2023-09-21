@@ -7,6 +7,12 @@ git push https://github.com/MohammedSolyman/simple_tetris.git master
 
 bug: when changing level, the last line is blank.
 
+
+
+exit button in game over dialogue was improved
+
+
+
 */
 void main() {
   runApp(const MainApp());
