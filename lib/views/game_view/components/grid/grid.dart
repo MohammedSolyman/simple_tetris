@@ -23,7 +23,7 @@ class Grid extends StatelessWidget {
         return Obx(() {
           return Container(
             decoration: BoxDecoration(
-              border: Border.all(color: Colors.green.shade900, width: 6),
+              border: Border.all(color: Colors.purple.shade900, width: 6),
             ),
             child: GridView.builder(
                 padding: const EdgeInsets.all(0),

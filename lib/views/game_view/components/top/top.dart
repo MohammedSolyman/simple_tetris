@@ -10,9 +10,9 @@ class Top extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.only(top: 30),
       decoration: BoxDecoration(
-          border: Border.all(color: Colors.green.shade900, width: 6),
-          gradient: const LinearGradient(colors: [
-            Colors.green,
+          border: Border.all(color: Colors.purple.shade900, width: 6),
+          gradient: LinearGradient(colors: [
+            Colors.purple,
             Colors.blue,
           ], begin: Alignment.topLeft, end: Alignment.bottomRight)),
       child: const Row(

@@ -13,9 +13,9 @@ class Bottom extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 20),
       decoration: BoxDecoration(
-          border: Border.all(color: Colors.green.shade900, width: 6),
+          border: Border.all(color: Colors.purple.shade900, width: 6),
           gradient: const LinearGradient(colors: [
-            Colors.green,
+            Colors.purple,
             Colors.blue,
           ], begin: Alignment.topLeft, end: Alignment.bottomRight)),
       child: const Row(
