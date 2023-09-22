@@ -1,4 +1,3 @@
-import 'package:audioplayers/audioplayers.dart';
 import 'package:get/get.dart';
 import 'package:simple_tetris/constants/my_audio.dart';
 import 'package:simple_tetris/data_types/player/player.dart';

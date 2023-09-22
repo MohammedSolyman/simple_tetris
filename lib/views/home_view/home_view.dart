@@ -97,13 +97,13 @@ class _HomeViewState extends State<HomeView>
                       fit: BoxFit.cover)),
             ),
             Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   gradient: LinearGradient(
                       colors: [Colors.transparent, Colors.purple],
                       begin: Alignment.center,
                       end: Alignment.bottomCenter)),
             ),
-            Positioned(top: 0, right: 0, child: const SettingsMenu()),
+            const Positioned(top: 0, right: 0, child: SettingsMenu()),
             Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -112,7 +112,7 @@ class _HomeViewState extends State<HomeView>
                       right: 10,
                       left: 10,
                       bottom: MediaQuery.of(context).viewInsets.bottom),
-                  child: NameEntry(),
+                  child: const NameEntry(),
                 ),
               ],
             )
