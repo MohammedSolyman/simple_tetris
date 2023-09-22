@@ -45,4 +45,4 @@ flutter_launcher_icons:
   image_path: "assets/app_icons/icon4.png"
   
 flutter_native_splash:
-  color: "#024811"
+  background_image: "assets/images/splash_screen/gradient.jpg"  

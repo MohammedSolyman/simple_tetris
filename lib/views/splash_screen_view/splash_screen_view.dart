@@ -26,19 +26,25 @@ class _SplashScreenViewState extends State<SplashScreenView>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromRGBO(2, 72, 17, 1),
-      body: Center(
-        child: SizedBox(
-          width: 100,
-          height: 100,
-          child: LottieBuilder(
-            lottie: AssetLottie('assets/animated_files/splash_screen2.json'),
-            controller: animationController,
-            onLoaded: (p0) async {
-              animationController.duration = p0.duration;
-              await animationController.forward();
-              Get.off(const HomeView());
-            },
+      body: Container(
+        decoration: BoxDecoration(
+            gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [Colors.blue, Colors.purple])),
+        child: Center(
+          child: SizedBox(
+            width: 150,
+            height: 150,
+            child: LottieBuilder(
+              lottie: AssetLottie('assets/animated_files/splash_screen5.json'),
+              controller: animationController,
+              onLoaded: (p0) async {
+                animationController.duration = p0.duration;
+                await animationController.forward();
+                Get.off(const HomeView());
+              },
+            ),
           ),
         ),
       ),

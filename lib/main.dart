@@ -24,7 +24,24 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       home: SplashScreenView(),
+    );
+  }
+}
+
+class gra extends StatelessWidget {
+  const gra({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [Colors.blue, Colors.purple]))),
     );
   }
 }
