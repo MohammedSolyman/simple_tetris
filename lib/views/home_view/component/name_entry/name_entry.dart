@@ -9,12 +9,13 @@ class NameEntry extends StatelessWidget {
     super.key,
   });
 
-  final GlobalKey<FormState> globalKey = GlobalKey<FormState>();
+  static final GlobalKey<FormState> globalKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
     HompePageController hompePageController = Get.put(HompePageController());
     return Row(
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Expanded(
             child: Form(
@@ -35,18 +36,18 @@ class NameEntry extends StatelessWidget {
             cursorWidth: 5,
             style: GoogleFonts.croissantOne(color: Colors.red),
             decoration: InputDecoration(
+              errorStyle: GoogleFonts.croissantOne(color: Colors.yellow),
               label: Text(
                 'your name',
                 style: GoogleFonts.croissantOne(color: Colors.red),
               ),
-              fillColor: Colors.yellow[500]!.withOpacity(0.5),
+              fillColor: Colors.yellow[500],
               filled: true,
-              focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(20),
-                  borderSide: const BorderSide(width: 6, color: Colors.yellow)),
-              enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(20),
-                  borderSide: const BorderSide(width: 6, color: Colors.yellow)),
+              focusedErrorBorder: myErrorBorders(),
+              errorBorder: myErrorBorders(),
+              border: myBorders(),
+              focusedBorder: myBorders(),
+              enabledBorder: myBorders(),
             ),
           ),
         )),
@@ -66,5 +67,17 @@ class NameEntry extends StatelessWidget {
         ),
       ],
     );
+  }
+
+  OutlineInputBorder myBorders() {
+    return OutlineInputBorder(
+        borderRadius: BorderRadius.circular(20),
+        borderSide: BorderSide(width: 6, color: Colors.blue.shade900));
+  }
+
+  OutlineInputBorder myErrorBorders() {
+    return OutlineInputBorder(
+        borderRadius: BorderRadius.circular(20),
+        borderSide: const BorderSide(width: 6, color: Colors.red));
   }
 }

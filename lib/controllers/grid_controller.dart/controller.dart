@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:simple_tetris/controllers/grid_controller.dart/initialization_controller.dart';
 import 'package:simple_tetris/services/database/database_helper.dart';
+import 'package:simple_tetris/services/audio/audio.dart';
 import 'package:simple_tetris/constants/grid_constants.dart';
 import 'package:simple_tetris/constants/my_audio.dart';
 import 'package:simple_tetris/controllers/home_page_controller/home_page_controller.dart';
@@ -36,7 +37,7 @@ class Controller extends InitializationController {
     });
     initializeGrid();
     initializeCurrentTetrino();
-    playAudio(MyAudio.start);
+    Audio.playAudio(path: MyAudio.start, isLoop: false);
     gridModel.update((val) {
       val!.timer =
           Timer.periodic(gridModel.value.level.duration, (Timer timer) async {
@@ -79,7 +80,7 @@ class Controller extends InitializationController {
   }
 
   void _toLevel(Level level) {
-    playAudio(MyAudio.levelCompleted);
+    Audio.playAudio(path: MyAudio.levelCompleted, isLoop: false);
     gridModel.update((val) {
       val!.timer!.cancel();
     });

@@ -1,0 +1,26 @@
+[33mfad0c29[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m exit system were improved
+[33mee445cb[m exit button in game over dialogue was improved, exit dialogue was created
+[33m22269cc[m project was restructured, sound control in game page was added
+[33mbf7c235[m initial top list page waas added
+[33m598e720[m setting menu was created
+[33m303d383[m initial database logic was added
+[33m0d74232[m home page was improved, and text form fiels was added
+[33m245ad4b[m level completed dialod was added
+[33mb1d515f[m pause / resume button was added
+[33m11b0db6[m grid view ui was improved
+[33m0bd11be[m game over dialog was added, complete line was added but has a bug
+[33m2cdcc6c[m native splash screen, custumized animated splash screen and homepage  were added
+[33m04ae24f[m automatic change of cells number, different cells number same grid size features were added
+[33m2d9604a[m level and score features were added, cells number need to be improved
+[33m6e501c3[m generalization of initial position was added
+[33m3dc8572[m all rotations are clockwise
+[33m33edab0[m down move and audio logic were added
+[33m07e14fd[m four-step rotations were added
+[33m4239c49[m two successive completed lines bug was resolved, a two-shape rotation of stick,o,dash,l,s,t,z was added
+[33mba77773[m initial rotation logic was added, moving checks were modified
+[33m5e2aed7[m landing, left and right chescks were modified, destroying line and shifting down were added
+[33m039bf56[m winning check logis was placed
+[33mca95728[m right and left moves were fixed, all tetrinos were added, colors werer imporoved
+[33mebe10c0[m first day
+[33me02e2f2[m cell template was created, initial game grid was created
+[33ma459830[m first commit

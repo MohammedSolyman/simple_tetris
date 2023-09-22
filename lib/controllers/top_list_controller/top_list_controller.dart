@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:simple_tetris/constants/my_audio.dart';
 import 'package:simple_tetris/data_types/player/player.dart';
 import 'package:simple_tetris/models/top_list_model.dart';
+import 'package:simple_tetris/services/audio/audio.dart';
 import 'package:simple_tetris/services/database/database_helper.dart';
 
 class TopListController extends GetxController {
@@ -24,34 +25,23 @@ class TopListController extends GetxController {
     });
   }
 
-  AudioPlayer player = AudioPlayer();
-  Source source = AssetSource(MyAudio.topList);
-
-  playTopListSound() async {
-    await player.play(source);
-  }
-
-  stopTopListSound() async {
-    await player.stop();
-  }
-
   @override
   void onInit() async {
     super.onInit();
-    await playTopListSound();
+    await Audio.playAudio(path: MyAudio.topList, isLoop: false);
     getData();
   }
 
-  @override
-  void dispose() async {
-    super.dispose();
-    await stopTopListSound();
-    print('disposed ....................');
-  }
+  // @override
+  // void dispose() async {
+  //   super.dispose();
+  //   await Audio.stopAudio();
+  //   print('disposed ....................');
+  // }
 
   @override
   InternalFinalCallback<void> get onDelete {
-    stopTopListSound();
+    Audio.stopAudio();
     print('deleted ....................');
     return super.onDelete;
   }
