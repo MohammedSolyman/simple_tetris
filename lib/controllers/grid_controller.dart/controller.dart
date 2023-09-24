@@ -1,12 +1,10 @@
 import 'dart:async';
 import 'package:flutter/services.dart';
-import 'package:get/get.dart';
 import 'package:simple_tetris/controllers/grid_controller.dart/initialization_controller.dart';
 import 'package:simple_tetris/services/database/database_helper.dart';
 import 'package:simple_tetris/services/audio/audio.dart';
 import 'package:simple_tetris/constants/grid_constants.dart';
 import 'package:simple_tetris/constants/my_audio.dart';
-import 'package:simple_tetris/controllers/home_page_controller/home_page_controller.dart';
 import 'package:simple_tetris/data_types/level/level.dart';
 import 'package:simple_tetris/views/game_view/components/dialoges/dialog_level_completed.dart';
 
@@ -22,8 +20,6 @@ ColorController
 GetxController
 */
 class Controller extends InitializationController {
-  HompePageController hompePageController = Get.put(HompePageController());
-
   restart() {
     gridModel.update((val) {
       val!.level = GridConstants.one;
@@ -42,8 +38,6 @@ class Controller extends InitializationController {
       val!.timer =
           Timer.periodic(gridModel.value.level.duration, (Timer timer) async {
         if (val.isPlaying) {
-          print(timer.tick);
-
           if (isInNotOccupiedDown()) {
             moveDown();
           } else {

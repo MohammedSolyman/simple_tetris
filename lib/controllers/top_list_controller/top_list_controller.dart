@@ -20,7 +20,7 @@ class TopListController extends GetxController {
     }
 
     topListModel.update((val) {
-      val!.data = y;
+      y.length >= 10 ? val!.data = y.sublist(0, 10) : val!.data = y;
     });
   }
 

@@ -11,7 +11,7 @@ class Top extends StatelessWidget {
       padding: const EdgeInsets.only(top: 30),
       decoration: BoxDecoration(
           border: Border.all(color: Colors.purple.shade900, width: 6),
-          gradient: LinearGradient(colors: [
+          gradient: const LinearGradient(colors: [
             Colors.purple,
             Colors.blue,
           ], begin: Alignment.topLeft, end: Alignment.bottomRight)),

@@ -16,7 +16,6 @@ class DatabaseHelper {
        VALUES (?,?,?)
        ''', [map['name'], map['score'], nowInt]);
 
-    print('database ----------------  $x');
     return x;
   }
 
@@ -27,7 +26,6 @@ class DatabaseHelper {
       ORDER BY ${DatabaseConstants.columnNameScore} DESC
       ''');
 
-    print('database ----------------  $x');
     return x;
   }
 }
