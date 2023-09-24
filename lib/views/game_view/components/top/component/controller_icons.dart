@@ -17,13 +17,13 @@ class SoundControl extends StatelessWidget {
     }, child: Obx(() {
       if (controller.gridModel.value.isPlaying) {
         return Image.asset(
-          'assets/in_app_icons/play/red_pause.png',
+          'assets/in_app_icons/play/pause.png',
           height: 40,
           width: 40,
         );
       } else {
         return Image.asset(
-          'assets/in_app_icons/play/red_resume.png',
+          'assets/in_app_icons/play/resume.png',
           height: 40,
           width: 40,
         );

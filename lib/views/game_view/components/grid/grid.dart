@@ -27,8 +27,6 @@ class Grid extends StatelessWidget {
             ),
             child: GridView.builder(
                 padding: const EdgeInsets.all(0),
-                //  physics: const NeverScrollableScrollPhysics(),
-                // shrinkWrap: true,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount:
                         controller.gridModel.value.level.columnsLength,

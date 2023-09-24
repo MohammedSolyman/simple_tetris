@@ -19,7 +19,7 @@ class RightPart extends StatelessWidget {
               controller.moveRight();
             },
             child: Image.asset(
-              'assets/in_app_icons/arrows/red_right.png',
+              'assets/in_app_icons/arrows/right.png',
               color: Colors.red,
             ),
           ),

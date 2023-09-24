@@ -17,7 +17,7 @@ class BlurredBackGround extends StatelessWidget {
         height: double.infinity,
         decoration: const BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/images/top_list/top_list_image1.png'),
+                image: AssetImage('assets/images/top_list/top_list_image.png'),
                 fit: BoxFit.fill)),
       ),
     );

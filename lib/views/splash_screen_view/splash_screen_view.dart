@@ -37,7 +37,7 @@ class _SplashScreenViewState extends State<SplashScreenView>
             width: 150,
             height: 150,
             child: LottieBuilder(
-              lottie: AssetLottie('assets/animated_files/splash_screen5.json'),
+              lottie: AssetLottie('assets/animated_files/splash_screen.json'),
               controller: animationController,
               onLoaded: (p0) async {
                 animationController.duration = p0.duration;

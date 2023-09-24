@@ -32,7 +32,7 @@ class MiddlePart extends StatelessWidget {
               controller.moveDown();
             },
             child: Image.asset(
-              'assets/in_app_icons/arrows/red_down.png',
+              'assets/in_app_icons/arrows/down.png',
               color: Colors.red,
             ),
           ),

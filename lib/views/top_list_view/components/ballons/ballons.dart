@@ -9,7 +9,7 @@ class Ballons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LottieBuilder.asset(
-      'assets/animated_files/ballons1.json',
+      'assets/animated_files/ballons.json',
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
       fit: BoxFit.cover,

@@ -19,7 +19,7 @@ class LeftPart extends StatelessWidget {
               controller.moveLeft();
             },
             child: Image.asset(
-              'assets/in_app_icons/arrows/red_left.png',
+              'assets/in_app_icons/arrows/left.png',
               color: Colors.red,
             ),
           ),

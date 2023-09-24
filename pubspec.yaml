@@ -42,7 +42,7 @@ flutter:
 flutter_launcher_icons:
   android: "launcher_icon"
   ios: true
-  image_path: "assets/app_icons/icon4.png"
+  image_path: "assets/app_icons/app_icon.png"
   
 flutter_native_splash:
   background_image: "assets/images/splash_screen/gradient.jpg"  

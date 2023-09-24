@@ -13,7 +13,6 @@ class ScoreController extends CheckMovingController {
         i >= 0;
         i = i - gridModel.value.level.columnsLength) {
       //this ouer loop will loop the start of each lines
-      //  print('outer for i = $i ------');
 
       bool isCompelete = true;
       int max = i + gridModel.value.level.columnsLength;
@@ -31,7 +30,6 @@ class ScoreController extends CheckMovingController {
         _shiftDown(i);
         _addPoints();
         Audio.playAudio(path: MyAudio.lineCompleted, isLoop: false);
-        //  await dialogLineCompleted();
         i = i + gridModel.value.level.columnsLength;
       }
     }

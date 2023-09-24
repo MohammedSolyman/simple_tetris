@@ -9,7 +9,7 @@ Future<dynamic> dialogLineCompleted() {
 
   return Get.dialog(
     LottieBuilder.asset(
-      'assets/animated_files/complete_line1.json',
+      'assets/animated_files/complete_line.json',
       repeat: false,
     ),
     barrierColor: Colors.transparent,

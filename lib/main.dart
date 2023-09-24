@@ -7,12 +7,6 @@ git push https://github.com/MohammedSolyman/simple_tetris.git master
 
 bug: when changing level, the last line is blank.
 
-
-
-
-
-
-
 */
 void main() {
   runApp(const MainApp());

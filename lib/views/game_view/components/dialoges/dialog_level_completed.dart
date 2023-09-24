@@ -10,7 +10,7 @@ Future<void> dialogLevelCompleted() async {
     backgroundColor: Colors.grey[200],
     barrierDismissible: false,
     content: LottieBuilder.asset(
-      'assets/animated_files/complete_level3.json',
+      'assets/animated_files/complete_level.json',
       repeat: false,
     ),
   );

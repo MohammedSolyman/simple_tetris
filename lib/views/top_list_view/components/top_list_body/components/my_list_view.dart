@@ -24,17 +24,16 @@ class MyListView extends StatelessWidget {
               height: 40,
               decoration: const BoxDecoration(
                   image: DecorationImage(
-                      image:
-                          AssetImage('assets/in_app_icons/icons/star3.png'))),
+                      image: AssetImage('assets/in_app_icons/icons/star.png'))),
             ),
             LottieBuilder.asset(
-              'assets/animated_files/new_tetris.json',
+              'assets/animated_files/top_list_tetris.json',
               repeat: true,
               height: 70,
               width: 70,
             ),
             LottieBuilder.asset(
-              'assets/animated_files/new_date.json',
+              'assets/animated_files/date.json',
               repeat: true,
               height: 50,
               width: 50,

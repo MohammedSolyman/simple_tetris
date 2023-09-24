@@ -61,7 +61,7 @@ class NameEntry extends StatelessWidget {
                 }
               },
               child: Image.asset(
-                'assets/in_app_icons/play/blue_play.png',
+                'assets/in_app_icons/play/play.png',
                 color: Colors.yellow,
               )),
         ),

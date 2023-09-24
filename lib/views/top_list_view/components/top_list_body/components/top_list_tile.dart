@@ -36,8 +36,7 @@ class StarItem extends StatelessWidget {
               height: 40,
               decoration: const BoxDecoration(
                   image: DecorationImage(
-                      image:
-                          AssetImage('assets/in_app_icons/icons/star3.png'))),
+                      image: AssetImage('assets/in_app_icons/icons/star.png'))),
               child: Center(
                   child: Text(index.toString(),
                       style: GoogleFonts.croissantOne(
