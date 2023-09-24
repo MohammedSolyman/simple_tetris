@@ -57,7 +57,8 @@ class NameEntry extends StatelessWidget {
               onTap: () {
                 FormState? formState = globalKey.currentState;
                 if (formState!.validate()) {
-                  hompePageController.goToGame(hompePageController.getName());
+                  hompePageController.getName();
+                  hompePageController.goToGame();
                 }
               },
               child: Image.asset(

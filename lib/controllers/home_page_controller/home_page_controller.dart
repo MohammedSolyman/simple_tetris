@@ -6,14 +6,14 @@ import 'package:simple_tetris/views/game_view/game_view.dart';
 class HompePageController extends GetxController {
   Rx<HomePageModel> homePageModel = HomePageModel().obs;
 
-  void goToGame(String name) {
-    Get.off(GameView(
-      name: name,
-    ));
+  void goToGame() {
+    Get.off(const GameView());
   }
 
-  String getName() {
-    return homePageModel.value.textEditingController.text;
+  void getName() {
+    homePageModel.update((val) {
+      val!.name = val.textEditingController.text;
+    });
   }
 
   Future<void> toggleVolume() async {

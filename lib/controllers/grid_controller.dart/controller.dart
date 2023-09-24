@@ -1,6 +1,8 @@
 import 'dart:async';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 import 'package:simple_tetris/controllers/grid_controller.dart/initialization_controller.dart';
+import 'package:simple_tetris/controllers/home_page_controller/home_page_controller.dart';
 import 'package:simple_tetris/services/database/database_helper.dart';
 import 'package:simple_tetris/services/audio/audio.dart';
 import 'package:simple_tetris/constants/grid_constants.dart';
@@ -81,6 +83,7 @@ class Controller extends InitializationController {
     gridModel.update((val) async {
       await dialogLevelCompleted();
       val!.level = level;
+
       start();
     });
   }
@@ -110,7 +113,9 @@ class Controller extends InitializationController {
     //exit the application
   }
 
-  updateName(String name) {
+  updateName() {
+    String name = Get.find<HompePageController>().homePageModel.value.name;
+
     gridModel.update((val) {
       val!.name = name;
     });
@@ -123,6 +128,7 @@ class Controller extends InitializationController {
   @override
   void onInit() {
     super.onInit();
+    updateName();
     start();
   }
 

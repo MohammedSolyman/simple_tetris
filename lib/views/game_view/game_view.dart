@@ -8,8 +8,8 @@ import 'package:simple_tetris/views/game_view/components/grid/grid.dart';
 import 'package:simple_tetris/views/game_view/components/top/top.dart';
 
 class GameView extends StatefulWidget {
-  final String name;
-  const GameView({required this.name, super.key});
+  // final String name;
+  const GameView({super.key});
 
   @override
   State<GameView> createState() => _GameViewState();
@@ -33,8 +33,8 @@ class _GameViewState extends State<GameView>
 
   @override
   Widget build(BuildContext context) {
-    Controller controller = Get.put(Controller());
-    controller.updateName(widget.name);
+    Get.put(Controller());
+    // controller.updateName(widget.name);
     return const WillPopScope(
       onWillPop: dialogExitBackArrow,
       child: Scaffold(

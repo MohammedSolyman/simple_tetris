@@ -10,7 +10,7 @@ class BlurredBackGround extends StatelessWidget {
   Widget build(BuildContext context) {
     return Blur(
       blur: 0.3,
-      blurColor: Colors.blue,
+      blurColor: Colors.indigo.shade700,
       colorOpacity: 0.7,
       child: Container(
         width: double.infinity,

@@ -4,4 +4,5 @@ class HomePageModel {
   TextEditingController textEditingController = TextEditingController();
 
   bool isVolumeOn = true;
+  String name = '';
 }
