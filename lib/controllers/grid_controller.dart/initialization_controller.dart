@@ -12,14 +12,12 @@ import 'package:simple_tetris/data_types/tetrino/tetrinos/z.dart';
 
 class InitializationController extends RotationController {
   initializeGrid() {
-    for (int rowIndex = 0;
-        rowIndex < gridModel.value.level.rowsLength;
-        rowIndex++) {
-      for (int columnIndex = 0;
-          columnIndex < gridModel.value.level.columnsLength;
-          columnIndex++) {
-        Cell cell = Cell();
+    int cellsnumber =
+        gridModel.value.level.rowsLength * gridModel.value.level.columnsLength;
 
+    for (int i = 0; i < cellsnumber; i++) {
+      {
+        Cell cell = Cell();
         gridModel.value.cells.add(cell);
       }
     }

@@ -13,14 +13,13 @@ class Grid extends StatelessWidget {
     Controller controller = Get.find<Controller>();
     return Expanded(child: LayoutBuilder(
       builder: (context, constraints) {
-        double height = constraints.maxHeight;
-        double width = constraints.maxWidth;
-
-        double childAspectRatio =
-            (width / controller.gridModel.value.level.columnsLength) /
-                (height / controller.gridModel.value.level.rowsLength);
-
         return Obx(() {
+          double height = constraints.maxHeight;
+          double width = constraints.maxWidth;
+
+          double childAspectRatio =
+              (width / controller.gridModel.value.level.columnsLength) /
+                  (height / controller.gridModel.value.level.rowsLength);
           return Container(
             decoration: BoxDecoration(
               border: Border.all(color: Colors.purple.shade900, width: 6),

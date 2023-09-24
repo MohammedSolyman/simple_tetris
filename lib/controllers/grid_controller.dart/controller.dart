@@ -56,19 +56,19 @@ class Controller extends InitializationController {
 
   void changeLevel() {
     gridModel.update((val) async {
-      if (val!.points > 1000 &&
-          val.points < 2001 &&
+      if (val!.points > 900 &&
+          val.points < 1901 &&
           gridModel.value.level != GridConstants.two) {
         _toLevel(GridConstants.two);
-      } else if (val.points > 2000 &&
-          val.points < 3001 &&
+      } else if (val.points > 1900 &&
+          val.points < 2901 &&
           gridModel.value.level != GridConstants.three) {
         _toLevel(GridConstants.three);
-      } else if (val.points > 3000 &&
-          val.points < 4001 &&
+      } else if (val.points > 2900 &&
+          val.points < 3901 &&
           gridModel.value.level != GridConstants.four) {
         _toLevel(GridConstants.four);
-      } else if (val.points > 4000 &&
+      } else if (val.points > 3900 &&
           gridModel.value.level != GridConstants.five) {
         _toLevel(GridConstants.five);
       }
