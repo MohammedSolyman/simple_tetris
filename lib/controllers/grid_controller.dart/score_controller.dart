@@ -3,6 +3,7 @@ import 'package:simple_tetris/constants/my_colors.dart';
 import 'package:simple_tetris/controllers/grid_controller.dart/check_moving_controller.dart';
 import 'package:simple_tetris/services/audio/audio.dart';
 import 'package:simple_tetris/views/game_view/components/dialoges/dialog_game_over.dart';
+import 'package:vibration/vibration.dart';
 
 class ScoreController extends CheckMovingController {
   Future<void> lineComplete() async {
@@ -48,6 +49,12 @@ class ScoreController extends CheckMovingController {
       });
       await Future.delayed(const Duration(milliseconds: 30));
     }
+// vibrate 30 milliseconds for each cell.
+    if (await Vibration.hasVibrator() == true) {
+      await Vibration.vibrate(
+          duration: 30 * (gridModel.value.level.columnsLength));
+    }
+
     gridModel.update((val) {
       val!.isNotDestroying = true;
     });
