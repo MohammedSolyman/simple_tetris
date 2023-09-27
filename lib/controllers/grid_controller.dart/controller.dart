@@ -39,8 +39,12 @@ class Controller extends InitializationController {
     gridModel.update((val) {
       val!.timer =
           Timer.periodic(gridModel.value.level.duration, (Timer timer) async {
-        if (val.isPlaying) {
+        if (val.isPlaying && val.isNotDestroying) {
+          //if the game is being played. ie the user didn't click on 'pause'
+          //icon AND there is no line is being destroyed right now ...
           if (isInNotOccupiedDown()) {
+            //if there is not tetrino piece underneath, move the current tetrino
+            //piece downward.
             moveDown();
           } else {
             land();
@@ -122,6 +126,10 @@ class Controller extends InitializationController {
   }
 
   Future<void> exitApp() async {
+    //exit full screen mode.
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
+
+    //exit application.
     await SystemNavigator.pop();
   }
 

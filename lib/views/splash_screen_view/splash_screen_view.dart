@@ -20,6 +20,8 @@ class _SplashScreenViewState extends State<SplashScreenView>
     super.initState();
 
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
+    SystemChrome.setPreferredOrientations(
+        [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
     animationController = AnimationController(vsync: this);
   }
 

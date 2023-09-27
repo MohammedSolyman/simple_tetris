@@ -25,6 +25,8 @@ class GridModel {
   //settings icons it truen true, if the user clicls on the settings icons again,
   //it turns false;
   bool isVisibleIcons = false;
+  //when the line is being destroyed, it will be false, otherwise it becomes true.
+  bool isNotDestroying = true;
 
   bool isVolumeOn = true;
 }

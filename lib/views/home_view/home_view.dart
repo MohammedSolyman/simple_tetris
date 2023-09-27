@@ -3,33 +3,14 @@ import 'package:flutter/services.dart';
 import 'package:simple_tetris/views/home_view/component/name_entry/name_entry.dart';
 import 'package:simple_tetris/views/home_view/component/settings_button/settings_menu.dart';
 
-class HomeView extends StatefulWidget {
+class HomeView extends StatelessWidget {
   const HomeView({super.key});
 
   @override
-  State<HomeView> createState() => _HomeViewState();
-}
-
-class _HomeViewState extends State<HomeView>
-    with SingleTickerProviderStateMixin {
-  GlobalKey<FormState> globalKey = GlobalKey<FormState>();
-
-  @override
-  void initState() {
-    super.initState();
-
-    SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
-        overlays: SystemUiOverlay.values);
-  }
-
-  @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations(
+        [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
+
     return Scaffold(
         resizeToAvoidBottomInset: false,
         body: Stack(

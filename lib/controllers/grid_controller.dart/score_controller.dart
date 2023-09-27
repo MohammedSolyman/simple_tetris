@@ -36,6 +36,9 @@ class ScoreController extends CheckMovingController {
   }
 
   Future<void> _destroyLine(int startIndex) async {
+    gridModel.update((val) {
+      val!.isNotDestroying = false;
+    });
     int max = startIndex + gridModel.value.level.columnsLength;
 
     for (var i = startIndex; i < max; i++) {
@@ -43,7 +46,11 @@ class ScoreController extends CheckMovingController {
         val!.cells[i].color = MyColors.black;
         val.cells[i].isOcuppied = false;
       });
+      await Future.delayed(const Duration(milliseconds: 30));
     }
+    gridModel.update((val) {
+      val!.isNotDestroying = true;
+    });
   }
 
   void _shiftDown(int startIndex) {

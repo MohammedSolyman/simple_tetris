@@ -7,34 +7,15 @@ import 'package:simple_tetris/views/game_view/components/dialoges/dialog_exit.da
 import 'package:simple_tetris/views/game_view/components/grid/grid.dart';
 import 'package:simple_tetris/views/game_view/components/top/top.dart';
 
-class GameView extends StatefulWidget {
-  // final String name;
+class GameView extends StatelessWidget {
   const GameView({super.key});
-
-  @override
-  State<GameView> createState() => _GameViewState();
-}
-
-class _GameViewState extends State<GameView>
-    with SingleTickerProviderStateMixin {
-  @override
-  void initState() {
-    super.initState();
-
-    SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
-        overlays: SystemUiOverlay.values);
-  }
 
   @override
   Widget build(BuildContext context) {
     Get.put(Controller());
-    // controller.updateName(widget.name);
+    SystemChrome.setPreferredOrientations(
+        [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
+
     return const WillPopScope(
       onWillPop: dialogExitBackArrow,
       child: Scaffold(

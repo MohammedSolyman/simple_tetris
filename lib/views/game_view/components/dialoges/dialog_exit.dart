@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
@@ -74,6 +75,10 @@ Future<bool> dialogExitBackArrow() async {
                       )),
                   TextButton(
                       onPressed: () async {
+                        //exit full screen mode.
+                        SystemChrome.setEnabledSystemUIMode(
+                            SystemUiMode.edgeToEdge);
+
                         await controller.saveScore();
                         return Get.back(result: true);
                       },
