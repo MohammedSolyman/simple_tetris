@@ -41,7 +41,7 @@ class TopListController extends GetxController {
   @override
   InternalFinalCallback<void> get onDelete {
     Audio.stopAudio();
-    print('deleted ....................');
+
     return super.onDelete;
   }
 }
