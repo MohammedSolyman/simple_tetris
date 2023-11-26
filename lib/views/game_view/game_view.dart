@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:simple_tetris/controllers/my_animation_controller/my_animation_controller.dart';
 import 'package:simple_tetris/controllers/grid_controller.dart/controller.dart';
 import 'package:simple_tetris/views/game_view/components/bottom/bottom.dart';
 import 'package:simple_tetris/views/game_view/components/dialoges/dialog_exit.dart';
@@ -13,6 +14,7 @@ class GameView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Get.put(Controller());
+    Get.put(MyAnimationController());
     SystemChrome.setPreferredOrientations(
         [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
 
