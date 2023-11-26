@@ -18,7 +18,7 @@ class GridModel {
   TetrinoBase? currentTetrino;
   //the timer of the game.
   Timer? timer;
-  //is the user play now? it is true if the uer is playing, if the game is pause
+  //is the user play now? it is true if the user is playing, if the game is pause
   //it will be false.
   bool isPlaying = true;
   //is the row of settings icons visible or not, if the user clicks on the

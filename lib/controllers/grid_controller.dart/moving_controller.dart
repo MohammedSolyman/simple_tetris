@@ -2,7 +2,9 @@ import 'package:simple_tetris/controllers/grid_controller.dart/score_controller.
 
 class MovingController extends ScoreController {
   void moveRight() {
-    if (isInNotOccupiedRight() && isContinousRight()) {
+    if (isInNotOccupiedRight() &&
+        isContinousRight() &&
+        gridModel.value.isPlaying) {
       restoreGridColor();
       gridModel.update((val) {
         gridModel.update((val) {
@@ -19,7 +21,9 @@ class MovingController extends ScoreController {
   }
 
   void moveLeft() {
-    if (isInNotOccupiedLeft() && isContinousLeft()) {
+    if (isInNotOccupiedLeft() &&
+        isContinousLeft() &&
+        gridModel.value.isPlaying) {
       restoreGridColor();
       gridModel.update((val) {
         gridModel.update((val) {
@@ -36,7 +40,7 @@ class MovingController extends ScoreController {
   }
 
   void moveDown() {
-    if (isInNotOccupiedDown()) {
+    if (isInNotOccupiedDown() && gridModel.value.isPlaying) {
       restoreGridColor();
 
       gridModel.update((val) {
